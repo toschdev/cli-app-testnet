@@ -82,7 +82,6 @@ require (
 	github.com/buger/jsonparser v1.1.1 // indirect
 	github.com/butuzov/ireturn v0.1.1 // indirect
 	github.com/calmh/randomart v1.1.0 // indirect
-	github.com/cenkalti/backoff/v4 v4.2.0 // indirect
 	github.com/cespare/xxhash v1.1.0 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/charithe/durationcheck v0.0.9 // indirect

@@ -23,7 +23,7 @@ func (app) Execute(_ context.Context, c *plugin.ExecutedCommand, _ plugin.Client
 	// we were in a command line context. This implies to set os.Args
 	// correctly.
 	// Remove the first arg "ignite" from OsArgs because our network
-	// command root is "network" not "ignite".
+	// command root is "testnet" not "ignite".
 	os.Args = c.OsArgs[1:]
 	return cmd.NewNetwork().Execute()
 }
