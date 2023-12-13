@@ -4,13 +4,13 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// NewNetworkChain creates a new chain command that holds some other
+// NewNetworkManage creates a new chain command that holds some other
 // sub commands related to launching a testnet for a chain.
-func NewNetworkChain() *cobra.Command {
+func NewNetworkManage() *cobra.Command {
 	c := &cobra.Command{
-		Use:   "chain",
+		Use:   "manage",
 		Short: "Start a testnet, join as a validator and prepare node for launch",
-		Long: `The "chain" namespace features the most commonly used commands for launching
+		Long: `The "manage" namespace features the most commonly used commands for launching
 blockchains with Ignite.
 
 As a coordinator you start your blockchain with Ignite. When enough validators
@@ -34,15 +34,15 @@ All chains published to Ignite can be listed by using the "list" command.
 	}
 
 	c.AddCommand(
-		NewNetworkChainList(),
-		NewNetworkChainStart(),
-		NewNetworkChainSetup(),
-		NewNetworkChainInstall(),
-		NewNetworkChainJoin(),
-		NewNetworkChainPrepareLaunch(),
-		NewNetworkChainShow(),
-		NewNetworkChainAnnounceReady(),
-		NewNetworkChainRevertLaunch(),
+		NewNetworkManageList(),
+		NewNetworkManageStart(),
+		NewNetworkManageSetup(),
+		NewNetworkManageInstall(),
+		NewNetworkManageJoin(),
+		NewNetworkManagePrepareLaunch(),
+		NewNetworkManageShow(),
+		NewNetworkManageAnnounceReady(),
+		NewNetworkManageRevertLaunch(),
 	)
 
 	return c

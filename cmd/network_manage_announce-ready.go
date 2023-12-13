@@ -14,8 +14,8 @@ const (
 	flagLauchTime = "launch-time"
 )
 
-// NewNetworkChainAnnounceReady creates a announce-ready message that the chain is awaiting to be launched
-func NewNetworkChainAnnounceReady() *cobra.Command {
+// NewNetworkManageAnnounceReady creates a announce-ready message that the chain is awaiting to be launched
+func NewNetworkManageAnnounceReady() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "announce-ready [launch-id]",
 		Short: "Trigger the announcement of a chain, no further changes accepted",
@@ -24,25 +24,25 @@ launched.
 
 Only the coordinator of the chain can execute the announce-ready command.
 
-	ignite testnet chain announce-ready 42
+	ignite testnet manage announce-ready 42
 
 After the announce-ready command is executed no changes to the genesis are accepted. For
 example, validators will no longer be able to successfully execute the "ignite
-testnet chain join" command to apply as a validator.
+testnet manage join" command to apply as a validator.
 
 The announce-ready command sets the date and time after which the chain will start. By
 default, the current time is set. To give validators more time to prepare for
 the announce-ready, set the time with the "--launch-time" flag:
 
-	ignite testnet chain announce-ready 42 --launch-time 2023-01-01T00:00:00Z
+	ignite testnet manage announce-ready 42 --launch-time 2023-01-01T00:00:00Z
 
 After the announce-ready command is executed, validators can generate the finalized
 genesis and prepare their nodes for the launch. For example, validators can run
-"ignite testnet chain prepare" to generate the genesis and populate the peer
+"ignite testnet manage prepare" to generate the genesis and populate the peer
 list.
 
 If you want to change the launch time or open up the genesis file for changes
-you can use "ignite testnet chain revert-launch" to make it possible, for
+you can use "ignite testnet manage revert-launch" to make it possible, for
 example, to accept new validators and add accounts.
 `,
 		Args: cobra.ExactArgs(1),

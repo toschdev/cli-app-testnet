@@ -33,8 +33,8 @@ const (
 	flagRewardHeight   = "reward.height"
 )
 
-// NewNetworkChainPublish returns a new command to publish a new chain to start a new testnet.
-func NewNetworkChainStart() *cobra.Command {
+// NewNetworkManagePublish returns a new command to publish a new chain to start a new testnet.
+func NewNetworkManageStart() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "start [source-url]",
 		Short: "Start a new chain to start a new testnet",

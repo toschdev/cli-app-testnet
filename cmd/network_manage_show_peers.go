@@ -14,7 +14,7 @@ import (
 	"github.com/toschdev/testnet-app/network"
 )
 
-func newNetworkChainShowPeers() *cobra.Command {
+func NewNetworkManageShowPeers() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "peers [launch-id]",
 		Short: "Show peers list of the chain",

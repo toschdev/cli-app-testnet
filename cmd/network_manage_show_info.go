@@ -10,7 +10,7 @@ import (
 	"github.com/toschdev/testnet-app/network"
 )
 
-func newNetworkChainShowInfo() *cobra.Command {
+func NewNetworkManageShowInfo() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "info [launch-id]",
 		Short: "Show info details of the chain",

@@ -22,8 +22,8 @@ const (
 	flagForce = "force"
 )
 
-// NewNetworkChainPrepareLaunch returns a new command to prepare the chain for launch.
-func NewNetworkChainPrepareLaunch() *cobra.Command {
+// NewNetworkManagePrepareLaunch returns a new command to prepare the chain for launch.
+func NewNetworkManagePrepareLaunch() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "prepare-launch [launch-id]",
 		Short: "Prepares the validator node with the final genesis file and peers",
@@ -31,7 +31,7 @@ func NewNetworkChainPrepareLaunch() *cobra.Command {
 the final genesis and adding IP addresses of peers to the validator's
 configuration file.
 
-	ignite testnet chain prepare-launch 42
+	ignite testnet manage prepare-launch 42
 
 By default, Ignite uses "$HOME/spn/LAUNCH_ID" as the data directory. If you used
 a different data directory when initializing the node, use the "--home" flag and
@@ -41,7 +41,7 @@ Ignite generates the genesis file in "config/genesis.json" and adds peer IPs by
 modifying "config/config.toml".
 
 The prepare command should be executed after the coordinator has triggered the
-chain launch and finalized the genesis with "ignite testnet chain launch". You
+chain launch and finalized the genesis with "ignite testnet manage launch". You
 can force Ignite to run the prepare command without checking if the launch has
 been triggered with the "--force" flag (this is not recommended).
 

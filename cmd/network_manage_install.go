@@ -13,8 +13,8 @@ import (
 	"github.com/toschdev/testnet-app/network/networkchain"
 )
 
-// NewNetworkChainInstall returns a new command to install a chain's binary by the launch id.
-func NewNetworkChainInstall() *cobra.Command {
+// NewNetworkManageInstall returns a new command to install a chain's binary by the launch id.
+func NewNetworkManageInstall() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "install [launch-id]",
 		Short: "Install chain binary for a launch",

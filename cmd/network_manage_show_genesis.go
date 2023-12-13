@@ -14,7 +14,7 @@ import (
 	"github.com/toschdev/testnet-app/network/networktypes"
 )
 
-func newNetworkChainShowGenesis() *cobra.Command {
+func NewNetworkManageShowGenesis() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "genesis [launch-id]",
 		Short: "Show the chain genesis file",

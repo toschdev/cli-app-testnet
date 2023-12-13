@@ -15,7 +15,7 @@ var (
 	chainVestingAccSummaryHeader = []string{"Vesting Account", "Total Balance", "Vesting", "EndTime"}
 )
 
-func newNetworkChainShowAccounts() *cobra.Command {
+func NewNetworkManageShowAccounts() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "accounts [launch-id]",
 		Short: "Show all vesting and genesis accounts of the chain",
