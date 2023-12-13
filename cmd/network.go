@@ -59,7 +59,7 @@ const (
 // related to creating a new network collaboratively.
 func NewNetwork() *cobra.Command {
 	c := &cobra.Command{
-		Use:     "network [command]",
+		Use:     "testnet [command]",
 		Aliases: []string{"n"},
 		Short:   "Launch a blockchain in production",
 		Long: `
