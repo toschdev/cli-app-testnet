@@ -96,7 +96,7 @@ func networkChainPrepareHandler(cmd *cobra.Command, args []string) error {
 	}
 
 	if !force && chainLaunch.Metadata.Cli.Version != "" && !chainLaunch.Metadata.IsCurrentVersion() {
-		return fmt.Errorf(`chain %d has been published with a different version of the plugin (%s, current version is %s)
+		return fmt.Errorf(`chain %d has been published with a different version of the app (%s, current version is %s)
 this may result in a genesis that is different from other validators' genesis
 use --force to prepare anyway`,
 			launchID,
