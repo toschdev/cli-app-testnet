@@ -14,30 +14,29 @@ const (
 	flagLauchTime = "launch-time"
 )
 
-// NewNetworkChainLaunch creates a new chain launch command to launch
-// the network as a coordinator.
-func NewNetworkChainLaunch() *cobra.Command {
+// NewNetworkChainAnnounceReady creates a announce-ready message that the chain is awaiting to be launched
+func NewNetworkChainAnnounceReady() *cobra.Command {
 	c := &cobra.Command{
-		Use:   "launch [launch-id]",
-		Short: "Trigger the launch of a chain",
-		Long: `The launch command communicates to the world that the chain is ready to be
+		Use:   "announce-ready [launch-id]",
+		Short: "Trigger the announcement of a chain, no further changes accepted",
+		Long: `The announce-ready command communicates to the world that the chain is ready to be
 launched.
 
-Only the coordinator of the chain can execute the launch command.
+Only the coordinator of the chain can execute the announce-ready command.
 
-	ignite testnet chain launch 42
+	ignite testnet chain announce-ready 42
 
-After the launch command is executed no changes to the genesis are accepted. For
+After the announce-ready command is executed no changes to the genesis are accepted. For
 example, validators will no longer be able to successfully execute the "ignite
 testnet chain join" command to apply as a validator.
 
-The launch command sets the date and time after which the chain will start. By
+The announce-ready command sets the date and time after which the chain will start. By
 default, the current time is set. To give validators more time to prepare for
-the launch, set the time with the "--launch-time" flag:
+the announce-ready, set the time with the "--launch-time" flag:
 
-	ignite testnet chain launch 42 --launch-time 2023-01-01T00:00:00Z
+	ignite testnet chain announce-ready 42 --launch-time 2023-01-01T00:00:00Z
 
-After the launch command is executed, validators can generate the finalized
+After the announce-ready command is executed, validators can generate the finalized
 genesis and prepare their nodes for the launch. For example, validators can run
 "ignite testnet chain prepare" to generate the genesis and populate the peer
 list.

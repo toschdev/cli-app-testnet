@@ -16,7 +16,7 @@ blockchains with Ignite.
 As a coordinator you start your blockchain with Ignite. When enough validators
 are approved for the genesis and no changes are excepted to be made to the
 genesis, a coordinator announces that the chain is ready for launch with the
-"launch" command. In the case of an unsuccessful launch, the coordinator can revert it
+"announce-ready" command. In the case of an unsuccessful launch, the coordinator can revert it
 using the "revert-launch" command.
 
 As a validator, you setup your node and apply to become a validator for a
@@ -41,7 +41,7 @@ All chains published to Ignite can be listed by using the "list" command.
 		NewNetworkChainJoin(),
 		NewNetworkChainPrepare(),
 		NewNetworkChainShow(),
-		NewNetworkChainLaunch(),
+		NewNetworkChainAnnounceReady(),
 		NewNetworkChainRevertLaunch(),
 	)
 
