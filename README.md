@@ -16,3 +16,7 @@ Then repeat the following loop:
 
 - Hack on the plugin code
 - Rerun `ignite testnet` to automatically recompile the app and test
+
+If something corrupted your plugins, remove them from:
+
+nano ~/.ignite/apps/igniteapps.yml # remove line with the app
