@@ -8,7 +8,7 @@ import (
 	"github.com/ignite/cli/ignite/pkg/events"
 	launchtypes "github.com/tendermint/spn/x/launch/types"
 
-	"github.com/toschdev/cli-plugin-testnet/network/networktypes"
+	"github.com/toschdev/cli-app-testnet/network/networktypes"
 )
 
 // Reviewal keeps a request's reviewal.

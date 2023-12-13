@@ -1,4 +1,4 @@
-module github.com/toschdev/cli-plugin-testnet
+module github.com/toschdev/cli-app-testnet
 
 go 1.21.1
 

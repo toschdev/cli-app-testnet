@@ -7,7 +7,7 @@ import (
 	hplugin "github.com/hashicorp/go-plugin"
 	"github.com/ignite/cli/ignite/services/plugin"
 
-	"github.com/toschdev/cli-plugin-testnet/cmd"
+	"github.com/toschdev/cli-app-testnet/cmd"
 )
 
 type app struct{}
@@ -44,7 +44,7 @@ func main() {
 	hplugin.Serve(&hplugin.ServeConfig{
 		HandshakeConfig: plugin.HandshakeConfig(),
 		Plugins: map[string]hplugin.Plugin{
-			"cli-plugin-testnet": plugin.NewGRPC(&app{}),
+			"cli-app-testnet": plugin.NewGRPC(&app{}),
 		},
 		GRPCServer: hplugin.DefaultGRPCServer,
 	})

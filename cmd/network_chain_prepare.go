@@ -13,9 +13,9 @@ import (
 	"github.com/ignite/cli/ignite/pkg/goenv"
 	"github.com/spf13/cobra"
 
-	"github.com/toschdev/cli-plugin-testnet/network"
-	"github.com/toschdev/cli-plugin-testnet/network/networkchain"
-	"github.com/toschdev/cli-plugin-testnet/network/networktypes"
+	"github.com/toschdev/cli-app-testnet/network"
+	"github.com/toschdev/cli-app-testnet/network/networkchain"
+	"github.com/toschdev/cli-app-testnet/network/networktypes"
 )
 
 const (

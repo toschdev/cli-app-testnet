@@ -5,7 +5,7 @@ import (
 
 	"github.com/ignite/cli/ignite/pkg/cliui"
 
-	"github.com/toschdev/cli-plugin-testnet/network/networktypes"
+	"github.com/toschdev/cli-app-testnet/network/networktypes"
 )
 
 // NewNetworkVersion creates a new version command to get the version of the plugin

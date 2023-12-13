@@ -7,7 +7,7 @@ import (
 	"github.com/ignite/cli/ignite/pkg/cliui/entrywriter"
 	"github.com/spf13/cobra"
 
-	"github.com/toschdev/cli-plugin-testnet/network/networktypes"
+	"github.com/toschdev/cli-app-testnet/network/networktypes"
 )
 
 var ProjectSummaryHeader = []string{

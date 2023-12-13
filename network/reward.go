@@ -10,7 +10,7 @@ import (
 	"github.com/ignite/cli/ignite/pkg/events"
 	rewardtypes "github.com/tendermint/spn/x/reward/types"
 
-	"github.com/toschdev/cli-plugin-testnet/network/networktypes"
+	"github.com/toschdev/cli-app-testnet/network/networktypes"
 )
 
 // SetReward set a chain reward.

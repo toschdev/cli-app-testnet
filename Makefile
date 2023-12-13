@@ -2,7 +2,7 @@
 
 build:
 	@echo Building...
-	@go build -o ./cli-plugin-testnet.app .
+	@go build -o ./cli-app-testnet.app .
 
 ## mocks: generate mocks
 mocks:
@@ -14,7 +14,7 @@ mocks:
 format:
 	@echo Formatting...
 	@go run mvdan.cc/gofumpt -w .
-	@go run golang.org/x/tools/cmd/goimports -w -local github.com/toschdev/cli-plugin-testnet .
+	@go run golang.org/x/tools/cmd/goimports -w -local github.com/toschdev/cli-app-testnet .
 
 ## lint: Run Golang CI Lint.
 lint:

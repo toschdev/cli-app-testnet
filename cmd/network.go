@@ -14,9 +14,9 @@ import (
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	"github.com/toschdev/cli-plugin-testnet/network"
-	"github.com/toschdev/cli-plugin-testnet/network/networkchain"
-	"github.com/toschdev/cli-plugin-testnet/network/networktypes"
+	"github.com/toschdev/cli-app-testnet/network"
+	"github.com/toschdev/cli-app-testnet/network/networkchain"
+	"github.com/toschdev/cli-app-testnet/network/networktypes"
 )
 
 var (

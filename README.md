@@ -1,6 +1,6 @@
-# cli-plugin-testnet
+# cli-app-testnet
 
-`cli-plugin-testnet` is an app developed for [Ignite CLI](https://github.com/ignite/cli).
+`cli-app-testnet` is an app developed for [Ignite CLI](https://github.com/ignite/cli).
 
 The Ignite App adds `ignite testnet` commands that allow launching new Cosmos testnet blockchains by interacting with the Ignite Chain to coordinate with validators.
 
@@ -9,7 +9,7 @@ The Ignite App adds `ignite testnet` commands that allow launching new Cosmos te
 ## Developer instruction
 
 - Clone this repo locally
-- Run `ignite app install -g /absolute/path/to/cli-plugin-testnet` to add the app to global config
+- Run `ignite app install -g /absolute/path/to/cli-app-testnet` to add the app to global config
 - The `ignite testnet` command is now available with the local version of the app
 
 Then repeat the following loop:

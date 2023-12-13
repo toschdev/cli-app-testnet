@@ -13,8 +13,8 @@ import (
 	"github.com/tendermint/spn/pkg/chainid"
 	launchtypes "github.com/tendermint/spn/x/launch/types"
 
-	"github.com/toschdev/cli-plugin-testnet/network"
-	"github.com/toschdev/cli-plugin-testnet/network/networkchain"
+	"github.com/toschdev/cli-app-testnet/network"
+	"github.com/toschdev/cli-app-testnet/network/networkchain"
 )
 
 const (

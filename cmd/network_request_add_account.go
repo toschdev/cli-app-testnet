@@ -10,9 +10,9 @@ import (
 	"github.com/spf13/cobra"
 	launchtypes "github.com/tendermint/spn/x/launch/types"
 
-	"github.com/toschdev/cli-plugin-testnet/network"
-	"github.com/toschdev/cli-plugin-testnet/network/networkchain"
-	"github.com/toschdev/cli-plugin-testnet/network/networktypes"
+	"github.com/toschdev/cli-app-testnet/network"
+	"github.com/toschdev/cli-app-testnet/network/networkchain"
+	"github.com/toschdev/cli-app-testnet/network/networktypes"
 )
 
 // NewNetworkRequestAddAccount creates a new command to send add account request.

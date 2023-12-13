@@ -8,8 +8,8 @@ import (
 	"github.com/spf13/cobra"
 	launchtypes "github.com/tendermint/spn/x/launch/types"
 
-	"github.com/toschdev/cli-plugin-testnet/network"
-	"github.com/toschdev/cli-plugin-testnet/network/networktypes"
+	"github.com/toschdev/cli-app-testnet/network"
+	"github.com/toschdev/cli-app-testnet/network/networktypes"
 )
 
 var requestSummaryHeader = []string{"ID", "Status", "Type", "Content"}

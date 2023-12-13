@@ -11,7 +11,7 @@ import (
 	profiletypes "github.com/tendermint/spn/x/profile/types"
 	projecttypes "github.com/tendermint/spn/x/project/types"
 
-	"github.com/toschdev/cli-plugin-testnet/network/networktypes"
+	"github.com/toschdev/cli-app-testnet/network/networktypes"
 )
 
 // CoordinatorIDByAddress returns the CoordinatorByAddress from SPN.

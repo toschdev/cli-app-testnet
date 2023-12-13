@@ -7,7 +7,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 
-	"github.com/toschdev/cli-plugin-testnet/network"
+	"github.com/toschdev/cli-app-testnet/network"
 )
 
 const (
