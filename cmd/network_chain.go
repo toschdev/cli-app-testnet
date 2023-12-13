@@ -9,17 +9,17 @@ import (
 func NewNetworkChain() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "chain",
-		Short: "Publish a chain, join as a validator and prepare node for launch",
+		Short: "Start a testnet, join as a validator and prepare node for launch",
 		Long: `The "chain" namespace features the most commonly used commands for launching
 blockchains with Ignite.
 
-As a coordinator you "publish" your blockchain to Ignite. When enough validators
+As a coordinator you start your blockchain with Ignite. When enough validators
 are approved for the genesis and no changes are excepted to be made to the
 genesis, a coordinator announces that the chain is ready for launch with the
 "launch" command. In the case of an unsuccessful launch, the coordinator can revert it
 using the "revert-launch" command.
 
-As a validator, you "init" your node and apply to become a validator for a
+As a validator, you setup your node and apply to become a validator for a
 blockchain with the "join" command. After the launch of the chain is announced,
 validators can generate the finalized genesis and download the list of peers with the
 "prepare" command.
@@ -35,8 +35,8 @@ All chains published to Ignite can be listed by using the "list" command.
 
 	c.AddCommand(
 		NewNetworkChainList(),
-		NewNetworkChainPublish(),
-		NewNetworkChainInit(),
+		NewNetworkChainStart(),
+		NewNetworkChainSetup(),
 		NewNetworkChainInstall(),
 		NewNetworkChainJoin(),
 		NewNetworkChainPrepare(),

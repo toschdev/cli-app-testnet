@@ -34,15 +34,15 @@ const (
 	defaultCommissionMaxChangeRate = "0.01"
 )
 
-// NewNetworkChainInit returns a new command to initialize a chain from a published chain ID.
-func NewNetworkChainInit() *cobra.Command {
+// NewNetworkChainInit returns a new command to setup a chain from a published chain ID.
+func NewNetworkChainSetup() *cobra.Command {
 	c := &cobra.Command{
-		Use:   "init [launch-id]",
-		Short: "Initialize a chain from a published chain ID",
-		Long: `Ignite testnet chain init is a command used by validators to initialize a
+		Use:   "setup [launch-id]",
+		Short: "Setup a chain from a published chain ID",
+		Long: `Ignite testnet chain setup is a command used by validators to Setup a
 validator node for a blockchain from the information stored on the Ignite chain.
 
-	ignite testnet chain init 42
+	ignite testnet chain setup 42
 
 This command fetches the information about a chain with launch ID 42. The source
 code of the chain is cloned in a temporary directory, and the node's binary is
@@ -52,16 +52,16 @@ default, Ignite uses "~/spn/[launch-id]/" as the home directory for the blockcha
 An important part of initializing a validator node is creation of the gentx (a
 transaction that adds a validator at the genesis of the chain).
 
-The "init" command will prompt for values like self-delegation and commission.
+The "setup" command will prompt for values like self-delegation and commission.
 These values will be used in the validator's gentx. You can use flags to provide
 the values in non-interactive mode.
 
 Use the "--home" flag to choose a different path for the home directory of the
 blockchain:
 
-	ignite testnet chain init 42 --home ~/mychain
+	ignite testnet chain setup 42 --home ~/mychain
 
-The end result of the "init" command is a validator home directory with a
+The end result of the "setup" command is a validator home directory with a
 genesis validator transaction (gentx) file.`,
 		Args: cobra.ExactArgs(1),
 		RunE: networkChainInitHandler,
@@ -115,7 +115,7 @@ func networkChainInitHandler(cmd *cobra.Command, args []string) error {
 
 	if !getYes(cmd) && exist {
 		question := fmt.Sprintf(
-			"The chain has already been initialized under: %s. Would you like to overwrite the home directory",
+			"The chain has already been setup under: %s. Would you like to overwrite the home directory",
 			chainHome,
 		)
 		if err := session.AskConfirm(question); err != nil {
