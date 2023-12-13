@@ -13,9 +13,9 @@ import (
 	"github.com/ignite/cli/ignite/services/chain"
 	"github.com/manifoldco/promptui"
 	"github.com/spf13/cobra"
+	"github.com/toschdev/cli-plugin-testnet/network"
 
-	"github.com/ignite/cli-plugin-network/network"
-	"github.com/ignite/cli-plugin-network/network/networkchain"
+	"github.com/toschdev/cli-plugin-testnet/network/networkchain"
 )
 
 const (
@@ -39,10 +39,10 @@ func NewNetworkChainInit() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "init [launch-id]",
 		Short: "Initialize a chain from a published chain ID",
-		Long: `Ignite network chain init is a command used by validators to initialize a
+		Long: `Ignite testnet chain init is a command used by validators to initialize a
 validator node for a blockchain from the information stored on the Ignite chain.
 
-	ignite network chain init 42
+	ignite testnet chain init 42
 
 This command fetches the information about a chain with launch ID 42. The source
 code of the chain is cloned in a temporary directory, and the node's binary is
@@ -59,7 +59,7 @@ the values in non-interactive mode.
 Use the "--home" flag to choose a different path for the home directory of the
 blockchain:
 
-	ignite network chain init 42 --home ~/mychain
+	ignite testnet chain init 42 --home ~/mychain
 
 The end result of the "init" command is a validator home directory with a
 genesis validator transaction (gentx) file.`,

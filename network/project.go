@@ -10,7 +10,7 @@ import (
 	"github.com/ignite/cli/ignite/pkg/events"
 	projecttypes "github.com/tendermint/spn/x/project/types"
 
-	"github.com/ignite/cli-plugin-network/network/networktypes"
+	"github.com/toschdev/cli-plugin-testnet/network/networktypes"
 )
 
 type (

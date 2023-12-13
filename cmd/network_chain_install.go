@@ -9,8 +9,8 @@ import (
 	"github.com/ignite/cli/ignite/pkg/goenv"
 	"github.com/spf13/cobra"
 
-	"github.com/ignite/cli-plugin-network/network"
-	"github.com/ignite/cli-plugin-network/network/networkchain"
+	"github.com/toschdev/cli-plugin-testnet/network"
+	"github.com/toschdev/cli-plugin-testnet/network/networkchain"
 )
 
 // NewNetworkChainInstall returns a new command to install a chain's binary by the launch id.

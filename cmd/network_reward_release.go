@@ -16,8 +16,8 @@ import (
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 
-	"github.com/ignite/cli-plugin-network/network"
-	"github.com/ignite/cli-plugin-network/network/networktypes"
+	"github.com/toschdev/cli-plugin-testnet/network"
+	"github.com/toschdev/cli-plugin-testnet/network/networktypes"
 )
 
 const (
@@ -54,7 +54,7 @@ func NewNetworkRewardRelease() *cobra.Command {
 	c.Flags().String(flagTestnetAddressPrefix, cosmosaccount.AccountPrefixCosmos, "address prefix of the testnet chain")
 	c.Flags().String(flagTestnetAccount, cosmosaccount.DefaultAccount, "testnet chain account")
 	c.Flags().String(flagTestnetFaucet, "", "faucet address of the testnet chain")
-	c.Flags().Bool(flagCreateClientOnly, false, "only create the network client id")
+	c.Flags().Bool(flagCreateClientOnly, false, "only create the testnet client id")
 
 	return c
 }
@@ -112,7 +112,7 @@ func networkRewardRelease(cmd *cobra.Command, args []string) (err error) {
 		testnetFaucet, _        = cmd.Flags().GetString(flagTestnetFaucet)
 	)
 
-	session.StartSpinner("Creating network relayer client ID...")
+	session.StartSpinner("Creating testnet relayer client ID...")
 	chain, spn, err := createClient(cmd, n, session, launchID, chainRPC, spnChainID)
 	if err != nil {
 		return err

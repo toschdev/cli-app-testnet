@@ -11,7 +11,7 @@ import (
 	"github.com/ignite/cli/ignite/pkg/cliui/icons"
 	"github.com/spf13/cobra"
 
-	"github.com/ignite/cli-plugin-network/network"
+	"github.com/toschdev/cli-plugin-testnet/network"
 )
 
 func newNetworkChainShowPeers() *cobra.Command {

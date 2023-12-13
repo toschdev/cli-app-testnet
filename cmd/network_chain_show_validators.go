@@ -6,7 +6,7 @@ import (
 	"github.com/ignite/cli/ignite/pkg/cosmosutil"
 	"github.com/spf13/cobra"
 
-	"github.com/ignite/cli-plugin-network/network"
+	"github.com/toschdev/cli-plugin-testnet/network"
 )
 
 var chainGenesisValSummaryHeader = []string{"Genesis Validator", "Self Delegation", "Peer"}

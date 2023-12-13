@@ -14,9 +14,9 @@ import (
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	"github.com/ignite/cli-plugin-network/network"
-	"github.com/ignite/cli-plugin-network/network/networkchain"
-	"github.com/ignite/cli-plugin-network/network/networktypes"
+	"github.com/toschdev/cli-plugin-testnet/network"
+	"github.com/toschdev/cli-plugin-testnet/network/networkchain"
+	"github.com/toschdev/cli-plugin-testnet/network/networktypes"
 )
 
 var (
@@ -45,8 +45,8 @@ const (
 	flagCountTotal = "count-total"
 	flagReverse    = "reverse"
 
-	flagSPNNodeAddress   = "spn-node-address"
-	flagSPNFaucetAddress = "spn-faucet-address"
+	flagSPNNodeAddress   = "ign-node-address"
+	flagSPNFaucetAddress = "ign-faucet-address"
 
 	spnNodeAddressNightly   = "https://rpc.devnet.ignite.com:443"
 	spnFaucetAddressNightly = "https://faucet.devnet.ignite.com:443"
@@ -63,7 +63,7 @@ func NewNetwork() *cobra.Command {
 		Aliases: []string{"n"},
 		Short:   "Launch a blockchain in production",
 		Long: `
-Ignite Network commands allow to coordinate the launch of sovereign Cosmos blockchains.
+Ignite Testnet commands allow to coordinate the launch of sovereign Cosmos blockchains.
 
 To launch a Cosmos blockchain you need someone to be a coordinator and others to
 be validators. These are just roles, anyone can be a coordinator or a validator.
@@ -75,35 +75,35 @@ for launch.
 To publish the information about your chain as a coordinator run the following
 command (the URL should point to a repository with a Cosmos SDK chain):
 
-	ignite network chain publish github.com/ignite/example
+	ignite testnet chain publish github.com/ignite/example
 
 This command will return a launch identifier you will be using in the following
 commands. Let's say this identifier is 42.
 
-Next, ask validators to initialize their nodes and request to join the network
+Next, ask validators to initialize their nodes and request to join the testnet
 as validators. For a testnet you can use the default values suggested by the
 CLI.
 
-	ignite network chain init 42
+	ignite testnet chain init 42
 
-	ignite network chain join 42 --amount 95000000stake
+	ignite testnet chain join 42 --amount 95000000stake
 
 As a coordinator list all validator requests:
 
-	ignite network request list 42
+	ignite testnet request list 42
 
 Approve validator requests:
 
-	ignite network request approve 42 1,2
+	ignite testnet request approve 42 1,2
 
 Once you've approved all validators you need in the validator set, announce that
 the chain is ready for launch:
 
-	ignite network chain launch 42
+	ignite testnet chain launch 42
 
 Validators can now prepare their nodes for launch:
 
-	ignite network chain prepare 42
+	ignite testnet chain prepare 42
 
 The output of this command will show a command that a validator would use to
 launch their node, for example “exampled --home ~/.example”. After enough
@@ -114,8 +114,8 @@ validators launch their nodes, a blockchain will be live.
 	}
 
 	// configure flags.
-	c.PersistentFlags().BoolVar(&local, flagLocal, false, "Use local SPN network")
-	c.PersistentFlags().BoolVar(&nightly, flagNightly, false, "Use nightly SPN network")
+	c.PersistentFlags().BoolVar(&local, flagLocal, false, "Use local SPN testnet")
+	c.PersistentFlags().BoolVar(&nightly, flagNightly, false, "Use nightly SPN testnet")
 	// Includes Flags for Node and Faucet Address
 	c.PersistentFlags().AddFlagSet(flagSetSpnAddresses())
 
@@ -264,7 +264,7 @@ func newCache(cmd *cobra.Command) (cache.Storage, error) {
 		return cache.Storage{}, err
 	}
 
-	const cacheFileName = "ignite_network_cache.db"
+	const cacheFileName = "ignite_testnet_cache.db"
 	storage, err := cache.NewStorage(filepath.Join(cacheRootDir, cacheFileName))
 	if err != nil {
 		return cache.Storage{}, err
@@ -292,7 +292,7 @@ func getHome(cmd *cobra.Command) (home string) {
 
 func flagNetworkFrom() *flag.FlagSet {
 	fs := flag.NewFlagSet("", flag.ContinueOnError)
-	fs.String(flagFrom, cosmosaccount.DefaultAccount, "account name to use for sending transactions to SPN")
+	fs.String(flagFrom, cosmosaccount.DefaultAccount, "account name to use for sending transactions to IGN")
 	return fs
 }
 
@@ -366,15 +366,15 @@ func printSection(session *cliui.Session, title string) error {
 
 func flagSetSpnAddresses() *flag.FlagSet {
 	fs := flag.NewFlagSet("", flag.ContinueOnError)
-	fs.String(flagSPNNodeAddress, spnNodeAddressNightly, "SPN node address")
-	fs.String(flagSPNFaucetAddress, spnFaucetAddressNightly, "SPN faucet address")
+	fs.String(flagSPNNodeAddress, spnNodeAddressNightly, "IGN node address")
+	fs.String(flagSPNFaucetAddress, spnFaucetAddressNightly, "IGN faucet address")
 	return fs
 }
 
 func getSpnAddresses(cmd *cobra.Command) (NetworkAddresses, error) {
 	// check preconfigured networks
 	if nightly && local {
-		return NetworkAddresses{}, errors.New("local and nightly networks can't both be specified in the same command, specify local or nightly")
+		return NetworkAddresses{}, errors.New("local and nightly testnets can't both be specified in the same command, specify local or nightly")
 	}
 	if nightly {
 		return NetworkAddresses{spnNodeAddressNightly, spnFaucetAddressNightly}, nil

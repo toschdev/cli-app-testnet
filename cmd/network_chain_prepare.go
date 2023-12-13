@@ -13,9 +13,9 @@ import (
 	"github.com/ignite/cli/ignite/pkg/goenv"
 	"github.com/spf13/cobra"
 
-	"github.com/ignite/cli-plugin-network/network"
-	"github.com/ignite/cli-plugin-network/network/networkchain"
-	"github.com/ignite/cli-plugin-network/network/networktypes"
+	"github.com/ignite/cli-plugin-testnet/network"
+	"github.com/ignite/cli-plugin-testnet/network/networkchain"
+	"github.com/ignite/cli-plugin-testnet/network/networktypes"
 )
 
 const (
@@ -31,7 +31,7 @@ func NewNetworkChainPrepare() *cobra.Command {
 the final genesis and adding IP addresses of peers to the validator's
 configuration file.
 
-	ignite network chain prepare 42
+	ignite testnet chain prepare 42
 
 By default, Ignite uses "$HOME/spn/LAUNCH_ID" as the data directory. If you used
 a different data directory when initializing the node, use the "--home" flag and
@@ -41,7 +41,7 @@ Ignite generates the genesis file in "config/genesis.json" and adds peer IPs by
 modifying "config/config.toml".
 
 The prepare command should be executed after the coordinator has triggered the
-chain launch and finalized the genesis with "ignite network chain launch". You
+chain launch and finalized the genesis with "ignite testnet chain launch". You
 can force Ignite to run the prepare command without checking if the launch has
 been triggered with the "--force" flag (this is not recommended).
 
@@ -149,7 +149,7 @@ use --force to prepare anyway`,
 	if gitpod.IsOnGitpod() {
 		// Gitpod requires to enable proxy-tunnel tool
 		commandStr = fmt.Sprintf(
-			"ignite network tool proxy-tunnel %s/spn.yml & %s",
+			"ignite testnet tool proxy-tunnel %s/spn.yml & %s",
 			chainHome, commandStr,
 		)
 	}

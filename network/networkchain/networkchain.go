@@ -21,10 +21,10 @@ import (
 	"github.com/ignite/cli/ignite/services/chain"
 	"github.com/tendermint/spn/pkg/chainid"
 
-	"github.com/ignite/cli-plugin-network/network/networktypes"
+	"github.com/toschdev/cli-plugin-testnet/network/networktypes"
 )
 
-// Chain represents a network blockchain and lets you interact with its source code and binary.
+// Chain represents a testnet blockchain and lets you interact with its source code and binary.
 type Chain struct {
 	id       string
 	launchID uint64

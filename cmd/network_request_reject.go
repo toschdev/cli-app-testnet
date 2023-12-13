@@ -6,7 +6,7 @@ import (
 	"github.com/ignite/cli/ignite/pkg/numbers"
 	"github.com/spf13/cobra"
 
-	"github.com/ignite/cli-plugin-network/network"
+	"github.com/toschdev/cli-plugin-testnet/network"
 )
 
 // NewNetworkRequestReject creates a new request reject
@@ -18,7 +18,7 @@ func NewNetworkRequestReject() *cobra.Command {
 		Short:   "Reject requests",
 		Long: `The "reject" command is used by a chain's coordinator to reject requests.
 
-	ignite network request reject 42 1,2,3-6,7,8
+	ignite testnet request reject 42 1,2,3-6,7,8
 
 The syntax of the "reject" command is similar to that of the "approve" command.
 `,

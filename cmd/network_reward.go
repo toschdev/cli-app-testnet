@@ -8,7 +8,7 @@ import (
 func NewNetworkReward() *cobra.Command {
 	c := &cobra.Command{
 		Use:    "reward",
-		Short:  "Manage network rewards",
+		Short:  "Manage testnet rewards",
 		Hidden: true,
 	}
 	c.AddCommand(

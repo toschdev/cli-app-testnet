@@ -9,7 +9,7 @@ import (
 	"github.com/ignite/cli/ignite/pkg/xtime"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ignite/cli-plugin-network/network/testutil"
+	"github.com/toschdev/cli-plugin-testnet/network/testutil"
 )
 
 var sampleTime = time.Unix(1000, 1000)

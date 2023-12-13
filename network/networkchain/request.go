@@ -8,7 +8,7 @@ import (
 	"github.com/ignite/cli/ignite/pkg/events"
 	"github.com/pkg/errors"
 
-	"github.com/ignite/cli-plugin-network/network/networktypes"
+	"github.com/toschdev/cli-plugin-testnet/network/networktypes"
 )
 
 // CheckRequestChangeParam builds the genesis for the chain from the launch approved requests.

@@ -10,8 +10,8 @@ import (
 	"github.com/ignite/cli/ignite/pkg/cliui/entrywriter"
 	"github.com/spf13/cobra"
 
-	"github.com/ignite/cli-plugin-network/network"
-	"github.com/ignite/cli-plugin-network/network/networktypes"
+	"github.com/ignite/cli-plugin-testnet/network"
+	"github.com/ignite/cli-plugin-testnet/network/networktypes"
 )
 
 var LaunchSummaryHeader = []string{

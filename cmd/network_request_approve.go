@@ -7,7 +7,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 
-	"github.com/ignite/cli-plugin-network/network"
+	"github.com/toschdev/cli-plugin-testnet/network"
 )
 
 const (
@@ -25,7 +25,7 @@ func NewNetworkRequestApprove() *cobra.Command {
 Multiple requests can be approved using a comma-separated list and/or using a
 dash syntax.
 
-	ignite network request approve 42 1,2,3-6,7,8
+	ignite testnet request approve 42 1,2,3-6,7,8
 
 The command above approves requests with IDs from 1 to 8 included on a chain
 with a launch ID 42.

@@ -4,8 +4,8 @@ import (
 	"github.com/ignite/cli/ignite/pkg/cliui"
 	"github.com/spf13/cobra"
 
-	"github.com/ignite/cli-plugin-network/network"
-	"github.com/ignite/cli-plugin-network/network/networkchain"
+	"github.com/toschdev/cli-plugin-testnet/network"
+	"github.com/toschdev/cli-plugin-testnet/network/networkchain"
 )
 
 // NewNetworkChainRevertLaunch creates a new chain revert launch command
@@ -13,12 +13,12 @@ import (
 func NewNetworkChainRevertLaunch() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "revert-launch [launch-id]",
-		Short: "Revert launch of a network as a coordinator",
+		Short: "Revert launch of a testnet as a coordinator",
 		Long: `The revert launch command reverts the previously scheduled launch of a chain.
 
 Only the coordinator of the chain can execute the launch command.
 
-	ignite network chain revert-launch 42
+	ignite testnet chain revert-launch 42
 
 After the revert launch command is executed, changes to the genesis of the chain
 are allowed again. For example, validators will be able to request to join the

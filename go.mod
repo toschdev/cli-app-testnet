@@ -1,4 +1,4 @@
-module github.com/ignite/cli-plugin-network
+module github.com/toschdev/cli-plugin-testnet
 
 go 1.21.1
 

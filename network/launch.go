@@ -8,7 +8,7 @@ import (
 	"github.com/ignite/cli/ignite/pkg/events"
 	launchtypes "github.com/tendermint/spn/x/launch/types"
 
-	"github.com/ignite/cli-plugin-network/network/networktypes"
+	"github.com/toschdev/cli-plugin-testnet/network/networktypes"
 )
 
 // MinLaunchTimeOffset represents an offset used when minimum launch time is used

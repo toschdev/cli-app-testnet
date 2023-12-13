@@ -14,8 +14,8 @@ import (
 	"github.com/rdegges/go-ipify"
 	"github.com/spf13/cobra"
 
-	"github.com/ignite/cli-plugin-network/network"
-	"github.com/ignite/cli-plugin-network/network/networkchain"
+	"github.com/toschdev/cli-plugin-testnet/network"
+	"github.com/toschdev/cli-plugin-testnet/network/networkchain"
 )
 
 const (
@@ -30,11 +30,11 @@ const (
 func NewNetworkChainJoin() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "join [launch-id]",
-		Short: "Request to join a network as a validator",
+		Short: "Request to join a testnet as a validator",
 		Long: `The "join" command is used by validators to send a request to join a blockchain.
 The required argument is a launch ID of a blockchain. The "join" command expects
 that the validator has already setup a home directory for the blockchain and has
-a gentx either by running "ignite network chain init" or initializing the data
+a gentx either by running "ignite testnet chain init" or initializing the data
 directory manually with the chain's binary.
 
 By default the "join" command just sends the request to join as a validator.
@@ -45,10 +45,10 @@ The following command will send a request to join blockchain with launch ID 42
 as a validator and request to be added as an account with a token balance of
 95000000 STAKE.
 
-	ignite network chain join 42 --amount 95000000stake
+	ignite testnet chain join 42 --amount 95000000stake
 
 A request to join as a validator contains a gentx file. Ignite looks for gentx
-in a home directory used by "ignite network chain init" by default. To use a
+in a home directory used by "ignite testnet chain init" by default. To use a
 different directory, use the "--home" flag or pass a gentx file directly with
 the  "--gentx" flag.
 
@@ -58,7 +58,7 @@ IP address and will attempt to automatically detect and fill in the value. If
 you want to manually specify the IP address, you can use the "--peer-address"
 flag:
 
-	ignite network chain join 42 --peer-address 0.0.0.0
+	ignite testnet chain join 42 --peer-address 0.0.0.0
 
 Since "join" broadcasts a transaction to the Ignite blockchain, you will need an
 account on the Ignite blockchain. During the testnet phase, however, Ignite

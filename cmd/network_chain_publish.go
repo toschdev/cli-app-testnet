@@ -13,8 +13,8 @@ import (
 	"github.com/tendermint/spn/pkg/chainid"
 	launchtypes "github.com/tendermint/spn/x/launch/types"
 
-	"github.com/ignite/cli-plugin-network/network"
-	"github.com/ignite/cli-plugin-network/network/networkchain"
+	"github.com/ignite/cli-plugin-testnet/network"
+	"github.com/ignite/cli-plugin-testnet/network/networkchain"
 )
 
 const (
@@ -33,18 +33,18 @@ const (
 	flagRewardHeight   = "reward.height"
 )
 
-// NewNetworkChainPublish returns a new command to publish a new chain to start a new network.
+// NewNetworkChainPublish returns a new command to publish a new chain to start a new testnet.
 func NewNetworkChainPublish() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "publish [source-url]",
-		Short: "Publish a new chain to start a new network",
+		Short: "Publish a new chain to start a new testnet",
 		Long: `To begin the process of launching a blockchain with Ignite, a coordinator needs
 to publish the information about a blockchain. The only required bit of
 information is the URL of the source code of the blockchain.
 
 The following command publishes the information about an example blockchain:
 
-	ignite network chain publish github.com/ignite/example
+	ignite testnet chain publish github.com/ignite/example
 
 This command fetches the source code of the blockchain, compiles the binary,
 verifies that a blockchain can be started with the binary, and publishes the
@@ -65,14 +65,14 @@ The repository name is used as the default chain ID. Ignite does not ensure that
 chain IDs are unique, but they have to have a valid format: [string]-[integer].
 To set a custom chain ID use the "--chain-id" flag.
 
-	ignite network chain publish github.com/ignite/example --chain-id foo-1
+	ignite testnet chain publish github.com/ignite/example --chain-id foo-1
 
 Once the chain is published users can request accounts with coin balances to be
 added to the chain's genesis. By default, users are free to request any number
 of tokens. If you want all users requesting tokens to get the same amount, use
 the "--account-balance" flag with a list of coins.
 
-	ignite network chain publish github.com/ignite/example --account-balance 2000foocoin
+	ignite testnet chain publish github.com/ignite/example --account-balance 2000foocoin
 `,
 		Args: cobra.ExactArgs(1),
 		RunE: networkChainPublishHandler,
@@ -84,8 +84,8 @@ the "--account-balance" flag with a list of coins.
 	c.Flags().String(flagHash, "", "Git hash to use for the repo")
 	c.Flags().String(flagGenesisURL, "", "URL to a custom Genesis")
 	c.Flags().String(flagGenesisConfig, "", "name of an Ignite config file in the repo for custom Genesis")
-	c.Flags().String(flagChainID, "", "chain ID to use for this network")
-	c.Flags().Uint64(flagProject, 0, "project ID to use for this network")
+	c.Flags().String(flagChainID, "", "chain ID to use for this testnet")
+	c.Flags().Uint64(flagProject, 0, "project ID to use for this testnet")
 	c.Flags().Bool(flagNoCheck, false, "skip verifying chain's integrity")
 	c.Flags().String(flagMetadata, "", "add chain metadata")
 	c.Flags().String(flagProjectTotalSupply, "", "add a total of the mainnet of a project")
@@ -352,7 +352,7 @@ func networkChainPublishHandler(cmd *cobra.Command, args []string) error {
 		}
 	}
 
-	session.Printf("%s Network published \n", icons.OK)
+	session.Printf("%s Testnet published \n", icons.OK)
 	if isMainnet {
 		session.Printf("%s Mainnet ID: %d \n", icons.Bullet, launchID)
 	} else {

@@ -16,7 +16,7 @@ import (
 	"github.com/pelletier/go-toml"
 	"github.com/pkg/errors"
 
-	"github.com/ignite/cli-plugin-network/network/networktypes"
+	"github.com/toschdev/cli-plugin-testnet/network/networktypes"
 )
 
 // listeningTimeout is the maximum time to wait for the chain start.
@@ -29,7 +29,7 @@ var validatorSetNilErrorMessages = []string{
 	"validator set is empty after InitGenesis",
 }
 
-// SimulateRequests simulates the genesis creation and the start of the network from the provided requests.
+// SimulateRequests simulates the genesis creation and the start of the testnet from the provided requests.
 func (c Chain) SimulateRequests(
 	ctx context.Context,
 	cacheStorage cache.Storage,
@@ -64,11 +64,11 @@ func (c Chain) SimulateRequests(
 		return err
 	}
 
-	c.ev.Send("Trying starting the network with the requests", events.ProgressStart())
+	c.ev.Send("Trying starting the testnet with the requests", events.ProgressStart())
 	if err := c.simulateChainStart(ctx); err != nil {
 		return err
 	}
-	c.ev.Send("The network can be started", events.ProgressFinish())
+	c.ev.Send("The testnet can be started", events.ProgressFinish())
 
 	return nil
 }
@@ -125,7 +125,7 @@ func (c Chain) simulateChainStart(ctx context.Context) error {
 	return <-exit
 }
 
-// setSimulationConfig sets in the config random available ports to allow check if the chain network can start.
+// setSimulationConfig sets in the config random available ports to allow check if the chain testnet can start.
 func (c Chain) setSimulationConfig() (string, error) {
 	// generate random server ports and servers list
 	ports, err := availableport.Find(5)

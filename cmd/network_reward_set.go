@@ -8,7 +8,7 @@ import (
 	"github.com/ignite/cli/ignite/pkg/cliui"
 	"github.com/spf13/cobra"
 
-	"github.com/ignite/cli-plugin-network/network"
+	"github.com/toschdev/cli-plugin-testnet/network"
 )
 
 // NewNetworkRewardSet creates a new chain reward set command to
@@ -16,7 +16,7 @@ import (
 func NewNetworkRewardSet() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "set [launch-id] [last-reward-height] [coins]",
-		Short: "set a network chain reward",
+		Short: "set a testnet chain reward",
 		Args:  cobra.ExactArgs(3),
 		RunE:  networkChainRewardSetHandler,
 	}

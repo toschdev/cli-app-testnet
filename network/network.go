@@ -20,7 +20,7 @@ import (
 	projecttypes "github.com/tendermint/spn/x/project/types"
 	rewardtypes "github.com/tendermint/spn/x/reward/types"
 
-	"github.com/ignite/cli-plugin-network/network/networktypes"
+	"github.com/toschdev/cli-plugin-testnet/network/networktypes"
 )
 
 //go:generate mockery --name CosmosClient --case underscore

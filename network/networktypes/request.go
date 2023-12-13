@@ -11,19 +11,19 @@ import (
 
 // Request action descriptions
 const (
-	RequestActionAddAccount        = "add account to the network"
-	RequestActionAddValidator      = "join the network as a validator"
-	RequestActionAddVestingAccount = "add vesting account to the network"
-	RequestActionRemoveAccount     = "remove account from the network"
-	RequestActionRemoveValidator   = "remove validator from the network"
-	RequestActionChangeParams      = "change param on the network"
+	RequestActionAddAccount        = "add account to the testnet"
+	RequestActionAddValidator      = "join the testnet as a validator"
+	RequestActionAddVestingAccount = "add vesting account to the testnet"
+	RequestActionRemoveAccount     = "remove account from the testnet"
+	RequestActionRemoveValidator   = "remove validator from the testnet"
+	RequestActionChangeParams      = "change param on the testnet"
 
-	RequestActionResultAddAccount        = "account added to the network"
-	RequestActionResultAddValidator      = "Validator added to the network"
-	RequestActionResultAddVestingAccount = "vesting account added to the network"
-	RequestActionResultRemoveAccount     = "account removed from network"
-	RequestActionResultRemoveValidator   = "validator removed from network"
-	RequestActionResultChangeParams      = "param changed on network"
+	RequestActionResultAddAccount        = "account added to the testnet"
+	RequestActionResultAddValidator      = "Validator added to the testnet"
+	RequestActionResultAddVestingAccount = "vesting account added to the testnet"
+	RequestActionResultRemoveAccount     = "account removed from testnet"
+	RequestActionResultRemoveValidator   = "validator removed from testnet"
+	RequestActionResultChangeParams      = "param changed on testnet"
 
 	RequestActionUnrecognized = "<unrecognized request>"
 )

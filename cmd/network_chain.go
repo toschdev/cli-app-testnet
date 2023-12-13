@@ -5,7 +5,7 @@ import (
 )
 
 // NewNetworkChain creates a new chain command that holds some other
-// sub commands related to launching a network for a chain.
+// sub commands related to launching a testnet for a chain.
 func NewNetworkChain() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "chain",
