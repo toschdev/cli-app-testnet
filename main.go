@@ -13,7 +13,7 @@ import (
 type app struct{}
 
 func (app) Manifest(context.Context) (*plugin.Manifest, error) {
-	m := &plugin.Manifest{Name: "network"}
+	m := &plugin.Manifest{Name: "testnet"}
 	m.ImportCobraCommand(cmd.NewNetwork(), "ignite")
 	return m, nil
 }
