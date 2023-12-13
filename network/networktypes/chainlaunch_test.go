@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/require"
 	launchtypes "github.com/tendermint/spn/x/launch/types"
 
-	"github.com/toschdev/cli-app-testnet/network/networktypes"
+	"github.com/toschdev/testnet-app/network/networktypes"
 )
 
 func TestToChainLaunch(t *testing.T) {

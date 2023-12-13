@@ -5,7 +5,7 @@ import (
 	"github.com/ignite/cli/ignite/pkg/yaml"
 	"github.com/spf13/cobra"
 
-	"github.com/toschdev/cli-app-testnet/network"
+	"github.com/toschdev/testnet-app/network"
 )
 
 // NewNetworkProjectShow returns a new command to show published project on Ignite.

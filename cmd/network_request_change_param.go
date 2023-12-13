@@ -5,8 +5,8 @@ import (
 	"github.com/spf13/cobra"
 	launchtypes "github.com/tendermint/spn/x/launch/types"
 
-	"github.com/toschdev/cli-app-testnet/network"
-	"github.com/toschdev/cli-app-testnet/network/networkchain"
+	"github.com/toschdev/testnet-app/network"
+	"github.com/toschdev/testnet-app/network/networkchain"
 )
 
 // NewNetworkRequestChangeParam creates a new command to send param change request.

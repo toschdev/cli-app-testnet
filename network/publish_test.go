@@ -16,8 +16,8 @@ import (
 	profiletypes "github.com/tendermint/spn/x/profile/types"
 	projecttypes "github.com/tendermint/spn/x/project/types"
 
-	"github.com/toschdev/cli-app-testnet/network/networktypes"
-	"github.com/toschdev/cli-app-testnet/network/testutil"
+	"github.com/toschdev/testnet-app/network/networktypes"
+	"github.com/toschdev/testnet-app/network/testutil"
 )
 
 var metadata = []byte(`{"cli":{"version":"1"}}`)

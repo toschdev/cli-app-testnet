@@ -7,8 +7,8 @@ import (
 	"github.com/stretchr/testify/require"
 	launchtypes "github.com/tendermint/spn/x/launch/types"
 
-	"github.com/toschdev/cli-app-testnet/network/networktypes"
-	"github.com/toschdev/cli-app-testnet/network/testutil"
+	"github.com/toschdev/testnet-app/network/networktypes"
+	"github.com/toschdev/testnet-app/network/testutil"
 )
 
 func TestSendRequest(t *testing.T) {

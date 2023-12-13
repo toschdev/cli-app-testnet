@@ -10,8 +10,8 @@ import (
 	"github.com/stretchr/testify/require"
 	rewardtypes "github.com/tendermint/spn/x/reward/types"
 
-	"github.com/toschdev/cli-app-testnet/network/networktypes"
-	"github.com/toschdev/cli-app-testnet/network/testutil"
+	"github.com/toschdev/testnet-app/network/networktypes"
+	"github.com/toschdev/testnet-app/network/testutil"
 )
 
 func TestSetReward(t *testing.T) {

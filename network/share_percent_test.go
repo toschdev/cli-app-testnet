@@ -7,7 +7,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/toschdev/cli-app-testnet/network"
+	"github.com/toschdev/testnet-app/network"
 )
 
 func TestParseSharePercentages(t *testing.T) {

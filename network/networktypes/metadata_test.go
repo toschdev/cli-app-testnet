@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/toschdev/cli-app-testnet/network/networktypes"
+	"github.com/toschdev/testnet-app/network/networktypes"
 )
 
 func TestMetadata_IsCurrentVersion(t *testing.T) {

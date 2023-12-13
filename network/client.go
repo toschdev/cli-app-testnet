@@ -7,7 +7,7 @@ import (
 	"github.com/ignite/cli/ignite/pkg/cosmoserror"
 	monitoringctypes "github.com/tendermint/spn/x/monitoringc/types"
 
-	"github.com/toschdev/cli-app-testnet/network/networktypes"
+	"github.com/toschdev/testnet-app/network/networktypes"
 )
 
 // CreateClient send create client message to SPN.

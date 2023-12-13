@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"strconv"
 
-	"github.com/toschdev/cli-app-testnet/network/networktypes"
+	"github.com/toschdev/testnet-app/network/networktypes"
 )
 
 // ChainHome returns the default home dir used for a chain from SPN.

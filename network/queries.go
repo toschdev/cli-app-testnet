@@ -15,7 +15,7 @@ import (
 	rewardtypes "github.com/tendermint/spn/x/reward/types"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/toschdev/cli-app-testnet/network/networktypes"
+	"github.com/toschdev/testnet-app/network/networktypes"
 )
 
 // ErrObjectNotFound is returned when the query returns a not found error.

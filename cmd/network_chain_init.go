@@ -13,9 +13,9 @@ import (
 	"github.com/ignite/cli/ignite/services/chain"
 	"github.com/manifoldco/promptui"
 	"github.com/spf13/cobra"
-	"github.com/toschdev/cli-app-testnet/network"
+	"github.com/toschdev/testnet-app/network"
 
-	"github.com/toschdev/cli-app-testnet/network/networkchain"
+	"github.com/toschdev/testnet-app/network/networkchain"
 )
 
 const (

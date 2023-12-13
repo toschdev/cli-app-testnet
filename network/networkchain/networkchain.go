@@ -21,7 +21,7 @@ import (
 	"github.com/ignite/cli/ignite/services/chain"
 	"github.com/tendermint/spn/pkg/chainid"
 
-	"github.com/toschdev/cli-app-testnet/network/networktypes"
+	"github.com/toschdev/testnet-app/network/networktypes"
 )
 
 // Chain represents a testnet blockchain and lets you interact with its source code and binary.
