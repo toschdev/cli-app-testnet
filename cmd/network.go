@@ -61,15 +61,15 @@ func NewNetwork() *cobra.Command {
 	c := &cobra.Command{
 		Use:     "testnet [command]",
 		Aliases: []string{"t"},
-		Short:   "Launch a blockchain in production",
+		Short:   "Launch a testnet",
 		Long: `
-Ignite Testnet commands allow to coordinate the launch of sovereign Cosmos blockchains.
+Ignite Testnet commands allow to coordinate the launch of sovereign Cosmos testnets.
 
-To launch a Cosmos blockchain you need someone to be a coordinator and others to
+To launch a Cosmos testnet you need someone to be a coordinator and others to
 be validators. These are just roles, anyone can be a coordinator or a validator.
 A coordinator publishes information about a chain to be launched on the Ignite
-blockchain, approves validator requests and coordinates the launch. Validators
-send requests to join a chain and start their nodes when a blockchain is ready
+testnet, approves validator requests and coordinates the launch. Validators
+send requests to join a chain and start their nodes when a testnet is ready
 for launch.
 
 To publish the information about your chain as a coordinator run the following
