@@ -22,7 +22,7 @@ using the "revert-launch" command.
 As a validator, you setup your node and apply to become a validator for a
 blockchain with the "join" command. After the launch of the chain is announced,
 validators can generate the finalized genesis and download the list of peers with the
-"prepare" command.
+"prepare-launch" command.
 
 The "install" command can be used to download, compile the source code and
 install the chain's binary locally. The binary can be used, for example, to
@@ -39,7 +39,7 @@ All chains published to Ignite can be listed by using the "list" command.
 		NewNetworkChainSetup(),
 		NewNetworkChainInstall(),
 		NewNetworkChainJoin(),
-		NewNetworkChainPrepare(),
+		NewNetworkChainPrepareLaunch(),
 		NewNetworkChainShow(),
 		NewNetworkChainAnnounceReady(),
 		NewNetworkChainRevertLaunch(),

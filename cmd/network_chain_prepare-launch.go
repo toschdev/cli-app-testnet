@@ -22,16 +22,16 @@ const (
 	flagForce = "force"
 )
 
-// NewNetworkChainPrepare returns a new command to prepare the chain for launch.
-func NewNetworkChainPrepare() *cobra.Command {
+// NewNetworkChainPrepareLaunch returns a new command to prepare the chain for launch.
+func NewNetworkChainPrepareLaunch() *cobra.Command {
 	c := &cobra.Command{
-		Use:   "prepare [launch-id]",
-		Short: "Prepare the chain for launch",
+		Use:   "prepare-launch [launch-id]",
+		Short: "Prepares the validator node with the final genesis file and peers",
 		Long: `The prepare command prepares a validator node for the chain launch by generating
 the final genesis and adding IP addresses of peers to the validator's
 configuration file.
 
-	ignite testnet chain prepare 42
+	ignite testnet chain prepare-launch 42
 
 By default, Ignite uses "$HOME/spn/LAUNCH_ID" as the data directory. If you used
 a different data directory when initializing the node, use the "--home" flag and
