@@ -60,7 +60,7 @@ const (
 func NewNetwork() *cobra.Command {
 	c := &cobra.Command{
 		Use:     "testnet [command]",
-		Aliases: []string{"n"},
+		Aliases: []string{"t"},
 		Short:   "Launch a blockchain in production",
 		Long: `
 Ignite Testnet commands allow to coordinate the launch of sovereign Cosmos blockchains.
