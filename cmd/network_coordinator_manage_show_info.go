@@ -10,7 +10,7 @@ import (
 	"github.com/toschdev/ignite-testnet/network"
 )
 
-func NewNetworkManageShowInfo() *cobra.Command {
+func NewNetworkCoordinatorManageShowInfo() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "info [launch-id]",
 		Short: "Show info details of the chain",

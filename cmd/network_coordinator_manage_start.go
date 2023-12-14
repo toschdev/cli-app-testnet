@@ -34,7 +34,7 @@ const (
 )
 
 // NewNetworkManagePublish returns a new command to publish a new chain to start a new testnet.
-func NewNetworkManageStart() *cobra.Command {
+func NewNetworkCoordinatorManageStart() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "start [source-url]",
 		Short: "Start a new chain to start a new testnet",
@@ -44,7 +44,7 @@ information is the URL of the source code of the blockchain.
 
 The following command publishes the information about an example blockchain:
 
-	ignite testnet chain start github.com/ignite/example
+	ignite testnet coordinator manage start github.com/ignite/example
 
 This command fetches the source code of the blockchain, compiles the binary,
 verifies that a blockchain can be started with the binary, and publishes the
@@ -65,14 +65,14 @@ The repository name is used as the default chain ID. Ignite does not ensure that
 chain IDs are unique, but they have to have a valid format: [string]-[integer].
 To set a custom chain ID use the "--chain-id" flag.
 
-	ignite testnet chain start github.com/ignite/example --chain-id foo-1
+	ignite testnet coordinator manage start github.com/ignite/example --chain-id foo-1
 
 Once the chain is published users can request accounts with coin balances to be
 added to the chain's genesis. By default, users are free to request any number
 of tokens. If you want all users requesting tokens to get the same amount, use
 the "--account-balance" flag with a list of coins.
 
-	ignite testnet chain start github.com/ignite/example --account-balance 2000foocoin
+	ignite testnet coordinator manage start github.com/ignite/example --account-balance 2000foocoin
 `,
 		Args: cobra.ExactArgs(1),
 		RunE: networkChainPublishHandler,

@@ -14,8 +14,8 @@ const (
 	flagLauchTime = "launch-time"
 )
 
-// NewNetworkManageAnnounceReady creates a announce-ready message that the chain is awaiting to be launched
-func NewNetworkManageAnnounceReady() *cobra.Command {
+// NewNetworkCoordinatorManageAnnounceReady creates a announce-ready message that the chain is awaiting to be launched
+func NewNetworkCoordinatorManageAnnounceReady() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "announce-ready [launch-id]",
 		Short: "Trigger the announcement of a chain, no further changes accepted",
@@ -24,7 +24,7 @@ launched.
 
 Only the coordinator of the chain can execute the announce-ready command.
 
-	ignite testnet manage announce-ready 42
+	ignite testnet coordinator manage announce-ready 42
 
 After the announce-ready command is executed no changes to the genesis are accepted. For
 example, validators will no longer be able to successfully execute the "ignite
@@ -34,7 +34,7 @@ The announce-ready command sets the date and time after which the chain will sta
 default, the current time is set. To give validators more time to prepare for
 the announce-ready, set the time with the "--launch-time" flag:
 
-	ignite testnet manage announce-ready 42 --launch-time 2023-01-01T00:00:00Z
+	ignite testnet coordinator manage announce-ready 42 --launch-time 2023-01-01T00:00:00Z
 
 After the announce-ready command is executed, validators can generate the finalized
 genesis and prepare their nodes for the launch. For example, validators can run

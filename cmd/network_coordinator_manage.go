@@ -4,9 +4,9 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// NewNetworkManage creates a new chain command that holds some other
+// NewNetworkCoordinatorManage creates a new chain command that holds some other
 // sub commands related to launching a testnet for a chain.
-func NewNetworkManage() *cobra.Command {
+func NewNetworkCoordinatorManage() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "manage",
 		Short: "Manage a testnet as coordinator",
@@ -34,13 +34,13 @@ All chains published to Ignite can be listed by using the "list" command.
 	}
 
 	c.AddCommand(
-		NewNetworkManageList(),
-		NewNetworkManageStart(),
-		NewNetworkManageInstall(),
-		NewNetworkManagePrepareLaunch(),
-		NewNetworkManageShow(),
-		NewNetworkManageAnnounceReady(),
-		NewNetworkManageRevertLaunch(),
+		NewNetworkCoordinatorManageStart(),
+		NewNetworkCoordinatorManageList(),
+		NewNetworkCoordinatorManageInstall(),
+		NewNetworkCoordinatorManageShow(),
+		NewNetworkCoordinatorManagePrepareLaunch(),
+		NewNetworkCoordinatorManageAnnounceReady(),
+		NewNetworkCoordinatorManageRevertLaunch(),
 	)
 
 	return c

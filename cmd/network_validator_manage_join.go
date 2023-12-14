@@ -27,7 +27,7 @@ const (
 
 // NewNetworkValidatorJoin creates a new manage join command to join
 // to a network as a validator.
-func NewNetworkValidatorJoin() *cobra.Command {
+func NewNetworkValidatorManageJoin() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "join [launch-id]",
 		Short: "Request to join a testnet as a validator",

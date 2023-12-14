@@ -14,7 +14,7 @@ import (
 	"github.com/toschdev/ignite-testnet/network/networktypes"
 )
 
-func NewNetworkManageShowGenesis() *cobra.Command {
+func NewNetworkCoordinatorManageShowGenesis() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "genesis [launch-id]",
 		Short: "Show the chain genesis file",

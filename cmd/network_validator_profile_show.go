@@ -7,8 +7,8 @@ import (
 	"github.com/ignite/cli/ignite/pkg/yaml"
 )
 
-// NewNetworkValidatorShow creates a command to show validator information.
-func NewNetworkValidatorShow() *cobra.Command {
+// NewNetworkValidatorProfileShow creates a command to show validator information.
+func NewNetworkValidatorProfileShow() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "show [address]",
 		Short: "Show a validator profile",

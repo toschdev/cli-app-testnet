@@ -75,7 +75,7 @@ for launch.
 To publish the information about your chain as a coordinator run the following
 command (the URL should point to a repository with a Cosmos SDK chain):
 
-	ignite testnet manage start github.com/ignite/example
+	ignite testnet coordinator manage start github.com/ignite/example
 
 This command will return a launch identifier you will be using in the following
 commands. Let's say this identifier is 42.
@@ -84,9 +84,9 @@ Next, ask validators to initialize their nodes and request to join the testnet
 as validators. For a testnet you can use the default values suggested by the
 CLI.
 
-	ignite testnet validator setup 42
+	ignite testnet validator manage setup 42
 
-	ignite testnet validator join 42 --amount 95000000stake
+	ignite testnet validator manage join 42 --amount 95000000stake
 
 As a coordinator list all validator requests:
 
@@ -99,11 +99,11 @@ Approve validator requests:
 Once you've approved all validators you need in the validator set, announce that
 the chain is ready for launch:
 
-	ignite testnet manage announce-ready 42
+	ignite testnet coordinator manage announce-ready 42
 
 Validators can now prepare their nodes for launch:
 
-	ignite testnet manage prepare-launch 42
+	ignite testnet coordinator manage prepare-launch 42
 
 The output of this command will show a command that a validator would use to
 launch their node, for example “exampled --home ~/.example”. After enough
@@ -121,7 +121,6 @@ validators launch their nodes, a blockchain will be live.
 
 	// add sub commands.
 	c.AddCommand(
-		NewNetworkManage(),
 		NewNetworkProject(),
 		NewNetworkGenesisEdit(),
 		NewNetworkReward(),

@@ -10,7 +10,7 @@ import (
 
 // NewNetworkManageRevertLaunch creates a new chain revert launch command
 // to revert a launched chain.
-func NewNetworkManageRevertLaunch() *cobra.Command {
+func NewNetworkCoordinatorManageRevertLaunch() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "revert-launch [launch-id]",
 		Short: "Revert launch of a testnet as a coordinator",
@@ -18,7 +18,7 @@ func NewNetworkManageRevertLaunch() *cobra.Command {
 
 Only the coordinator of the chain can execute the launch command.
 
-	ignite testnet manage revert-launch 42
+	ignite testnet coordinator manage revert-launch 42
 
 After the revert launch command is executed, changes to the genesis of the chain
 are allowed again. For example, validators will be able to request to join the
