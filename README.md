@@ -43,6 +43,7 @@ For a complete list of the workflow, check [workflow.md](./workflow.md).
     - Command: **`ignite testnet coordinator genesis reject <launch ID> <request IDs>`**
     - Purpose: The coordinator approves the validator requests essential for the validator set.
 4. **Coordinator: Announce Chain Launch Readiness**  
+    - Command: **`ignite testnet coordinator manageannounce-ready <launch ID>`
     - Purpose: Once the necessary validators are approved, this command signals that the chain is ready for launch.
 5. **Validators: Prepare Nodes for Launch**
     - Command: **`ignite testnet coordinator manage prepare-launch <launch ID>`**
