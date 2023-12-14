@@ -9,7 +9,7 @@ import (
 func NewNetworkManage() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "manage",
-		Short: "Start a testnet, join as a validator and prepare node for launch",
+		Short: "Manage a testnet as coordinator",
 		Long: `The "manage" namespace features the most commonly used commands for launching
 blockchains with Ignite.
 
