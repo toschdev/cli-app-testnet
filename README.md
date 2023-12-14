@@ -33,7 +33,7 @@ For a complete list of the workflow, check [workflow.md](./workflow.md).
    Do these steps on a dedicated validator node.
     - Command: **`ignite testnet node setup <launch ID>`**
     - Purpose: Validators setup their nodes and in order to request to join the testnet as validators.
-    - Command: **`ignite testnet validator manage join <launch ID> --amount <stake amount>`**
+    - Command: **`ignite testnet validator join <launch ID> --amount <stake amount>`**
     - Purpose: Validators specify the amount of stake they are committing.
 2. **Coordinator: List Validator Genesis Edits**
     - Command: **`ignite testnet coordinator genesis review-requests <launch ID>`**
