@@ -27,6 +27,7 @@ ignite app install -g $(pwd)
     - Purpose: This step involves the coordinator publishing details about the chain to be launched on the Ignite blockchain. The URL points to a repository with a Cosmos SDK chain.
     - Output: A launch ID
 1. **Validators: Setup Nodes and Request to Join**
+   
    Do these steps on a dedicated validator node.
     - Command: **`ignite testnet manage setup <launch ID>`**
     - Purpose: Validators setup their nodes and request to join the testnet as validators.
