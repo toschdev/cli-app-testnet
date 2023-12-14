@@ -38,6 +38,7 @@ ignite app install -g $(pwd)
     - Purpose: The coordinator lists all validator requests to review and approve.
 3. **Coordinator: Approve or Reject Validator Genesis Edits**
     - Command: **`ignite testnet genesis-edit approve <launch ID> <request IDs>`**
+    - Command: **`ignite testnet genesis-edit reject <launch ID> <request IDs>`**
     - Purpose: The coordinator approves the validator requests essential for the validator set.
 4. **Coordinator: Announce Chain Launch Readiness**
     - Command: **`ignite testnet manage announce-ready <launch ID>`**
