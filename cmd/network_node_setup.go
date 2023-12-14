@@ -35,7 +35,7 @@ const (
 )
 
 // NewNetworkValidatorSetup returns a new command to setup a chain from a published chain ID.
-func NewNetworkValidatorManageSetup() *cobra.Command {
+func NewNetworkNodeSetup() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "setup [launch-id]",
 		Short: "Setup a chain from a published chain ID",

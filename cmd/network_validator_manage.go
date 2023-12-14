@@ -16,7 +16,6 @@ func NewNetworkValidatorManage() *cobra.Command {
 
 	c.AddCommand(
 		NewNetworkValidatorManageJoin(),
-		NewNetworkValidatorManageSetup(),
 	)
 
 	return c

@@ -13,8 +13,8 @@ import (
 	"github.com/toschdev/ignite-testnet/network/networkchain"
 )
 
-// NewNetworkCoordinatorManageInstall returns a new command to install a chain's binary by the launch id.
-func NewNetworkCoordinatorManageInstall() *cobra.Command {
+// NewNetworkNodeInstall returns a new command to install a chain's binary by the launch id.
+func NewNetworkNodeInstall() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "install [launch-id]",
 		Short: "Install chain binary for a launch",
