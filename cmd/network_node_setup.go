@@ -38,11 +38,11 @@ const (
 func NewNetworkNodeSetup() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "setup [launch-id]",
-		Short: "Setup a chain from a published chain ID",
-		Long: `Ignite testnet manage setup is a command used by validators to Setup a
+		Short: "Setup a chains binary, create a gentx for a published chain ID",
+		Long: `Ignite testnet node setup is a command used by validators to Setup a
 validator node for a blockchain from the information stored on the Ignite chain.
 
-	ignite testnet manage setup 42
+	ignite testnet node setup 42
 
 This command fetches the information about a chain with launch ID 42. The source
 code of the chain is cloned in a temporary directory, and the node's binary is
@@ -59,7 +59,7 @@ the values in non-interactive mode.
 Use the "--home" flag to choose a different path for the home directory of the
 blockchain:
 
-	ignite testnet validator setup 42 --home ~/mychain
+	ignite testnet node setup 42 --home ~/mychain
 
 The end result of the "setup" command is a validator home directory with a
 genesis validator transaction (gentx) file.`,

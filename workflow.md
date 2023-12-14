@@ -33,20 +33,24 @@
 1. **Profile Management**
     - **Command:** **`ignite testnet validator profile`**
     - **Subcommands:**
-        - **`set-profile`**: Set information in the validator's profile.
+        - **`set`**: Set information in the validator's profile.
         - **`show`**: Display the validator's profile.
 2. **Validator Setup and Join**
     - **Command:** **`ignite testnet validator manage`**
     - **Subcommands:**
-        - **`setup`**: Set up a chain from a published chain ID.
         - **`join`**: Send a request to join a testnet as a validator.
 
 ### General Commands:
 
-1. **Tool Access**
+1. **Node** 
+    - **Command:** **`ignite node`**
+    - **Subcommands:** 
+      - **`install`**: Install the binaries
+      - **`setup`**: Setup the environment
+2. **Tool Access**
     - **Command:** **`ignite testnet tools`**
     - **Subcommands:** Various commands to run subsidiary tools.
-2. **Version Information**
+3. **Version Information**
     - **Command:** **`ignite testnet version`**
     - **Purpose:** Check the version of the Ignite CLI.
 
