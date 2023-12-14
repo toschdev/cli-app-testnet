@@ -17,6 +17,13 @@ func NewNetworkCoordinatorSet() *cobra.Command {
 		Short: "Set an information in a coordinator profile",
 		Long: `Coordinators on Ignite can set a profile containing a description for the coordinator.
 The coordinator set command allows to set information for the coordinator.
+
+Example:
+
+ignite testnet coordinator profile set details <name>
+ignite testnet coordinator profile set identity <identityhash>
+ignite testnet coordinator profile set website <websiteURL>
+
 The following information can be set:
 - details: general information about the coordinator.
 - identity: a piece of information to verify the identity of the coordinator with a system like Keybase or Veramo.
