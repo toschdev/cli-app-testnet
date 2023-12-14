@@ -2,7 +2,7 @@
 
 `ignite testnet` is an app developed for [Ignite CLI](https://github.com/ignite/cli).
 
-The Ignite App adds `ignite testnet` commands that allow launching new Cosmos testnet blockchains by interacting with the Ignite Chain to coordinate with validators.
+It is designed to facilitate the launching and management of new Cosmos testnet blockchains. This application streamlines the process of coordinating with validators and managing testnet deployments by leveraging the robust features of the Ignite Chain. With its specialized ignite testnet commands, users can efficiently initiate, configure, and control various aspects of their Cosmos testnets.
 
 ## Install
 
