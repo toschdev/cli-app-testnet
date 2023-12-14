@@ -1,6 +1,6 @@
-# testnet-app
+# ignite testnet
 
-`testnet-app` is an app developed for [Ignite CLI](https://github.com/ignite/cli).
+`ignite testnet` is an app developed for [Ignite CLI](https://github.com/ignite/cli).
 
 The Ignite App adds `ignite testnet` commands that allow launching new Cosmos testnet blockchains by interacting with the Ignite Chain to coordinate with validators.
 
