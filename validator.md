@@ -15,15 +15,13 @@ Validators can use the `ignite testnet validator profile` command to manage thei
 2. **Manage Validator Profile**
     - **`ignite testnet validator profile`**
     - Purpose: Manage personal profile information as a validator.
-3. **Prepare Node for Launch**
-    - **`ignite testnet validator prepare-launch`**
-    - Purpose: Generate the finalized genesis file and download the peer list after the launch announcement.
 
 ### Example Workflow
 
 1. **Coordinator Starts a Chain:**
     - Executes **`ignite testnet coordinator manage start`** with the necessary repository URL to initiate a new blockchain.
 2. **Validators Set Up and Apply:**
+    - Run **`ignite testnet validator setup-node`** which fechtes and installs the chains binary from GitHub, creates a gentx for a published chain ID. This command will prompt for values like self-delegation and commission.
     - Run **`ignite testnet validator join`** with their node information and stake amount to apply as a validator.
 3. **Coordinator Manages Genesis Requests:**
     - Uses **`ignite testnet coordinator genesis`** to review and approve or reject validator requests.

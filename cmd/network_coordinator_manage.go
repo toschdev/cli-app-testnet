@@ -40,6 +40,7 @@ All chains published to Ignite can be listed by using the "list" command.
 		NewNetworkCoordinatorManagePrepareLaunch(),
 		NewNetworkCoordinatorManageAnnounceReady(),
 		NewNetworkCoordinatorManageRevertLaunch(),
+		NewNetworkCoordinatorManageInstallBinaries(),
 	)
 
 	return c

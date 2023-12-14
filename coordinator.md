@@ -10,21 +10,24 @@ The `ignite testnet coordinator profile` command allows coordinators to manage t
 
 **Key Commands:**
 
-1. **Start a New Testnet**
+1. **Install chain binaries**
+    - **`ignite testnet coordinator manage install-binaries`**
+    - Purpose: Installing the correct binaries to work with the genesis file.
+2. **Start a New Testnet**
     - **`ignite testnet coordinator manage start`**
     - Purpose: Begin the process of launching a new blockchain.
-2. **Manage Genesis File**
+3. **Manage Genesis File**
     - **`ignite testnet coordinator genesis`**
     - Purpose: Create, show, reject, and approve requests for changes to the genesis file.
-3. **Announce Chain Readiness**
+4. **Announce Chain Readiness**
     - **`ignite testnet coordinator manage announce-ready`**
     - Purpose: Signal that no further changes to the genesis file are accepted and the chain is ready for launch.
-4. **Prepare for Launch**
+5. **Prepare for Launch**
     - **`ignite testnet coordinator manage prepare-launch`**
     - Purpose: Prepare the validator node with the final genesis file and peers.
-5. **Revert Launch**
+6. **Revert Launch**
     - **`ignite testnet coordinator manage revert-launch`**
     - Purpose: Revert the launch in case of issues, allowing for changes to the genesis file or validator set.
-6. **List Published Chains**
+7. **List Published Chains**
     - **`ignite testnet coordinator manage list`**
     - Purpose: View all chains published to Ignite.
