@@ -19,18 +19,15 @@ import (
 func NewNetworkCoordinatorGenesisEditAddAccount() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "add-account [launch-id] [address] [coins]",
-		Short: "Send a request to add an account to the genesis file",
-		Long: `The "add account" command creates a new request to add an account with a given
-address and a specified coin balance to the genesis of the chain.
+		Short: "Initiate an addition of a new account to the genesis file",
+		Long: `The "add-account" command is designed to facilitate the creation of a request for adding a new account to the genesis file of a blockchain chain.
 
-The request automatically fails to be applied if a genesis account or a vesting
-account with an identical address is already specified in the launch
-information.
-
-If a coordinator has specified that all genesis accounts on a chain should have
-the same balance (useful for testnets, for example), the "add account" expects
-only an address as an argument. Attempt to provide a token balance will result
-in an error.
+		Key Features:
+		
+		- Address and Balance Specification: Users can specify the account's address and its initial coin balance.
+		- Duplication Check: The command ensures no existing genesis or vesting account shares the same address in the launch information. If such an account exists, the request is automatically rejected.
+		- Uniform Balance Option: In scenarios where the coordinator mandates uniform balances across all genesis accounts (a common practice in testnets), this command requires only the address. Providing a token balance in such cases will lead to an error.
+		- Usage Context: Ideal for coordinators who need to manage the initial state of accounts in the genesis file, particularly useful in setting up test environments or specific distribution scenarios.
 `,
 		RunE: networkRequestAddAccountHandler,
 		Args: cobra.RangeArgs(2, 3),

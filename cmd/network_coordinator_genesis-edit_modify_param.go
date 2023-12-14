@@ -13,9 +13,27 @@ import (
 func NewNetworkCoordinatorGenesisModifyParam() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "modify-param [launch-id] [module-name] [param-name] [value (json, string, number)]",
-		Short: "To request changes to a module parameter in the genesis file",
-		RunE:  networkRequestChangeParamHandler,
-		Args:  cobra.ExactArgs(4),
+		Short: "Initiate modification of module parameters in the genesis file.",
+		Long: `The modify-param command is aimed at facilitating coordinators to propose changes to specific module parameters in the genesis file of a blockchain.
+		
+		Functionality:
+
+		- Parameter Customization: Allows coordinators to adjust module parameters to tailor the blockchain's behavior according to specific needs or objectives.
+		- Genesis File Integration: Ensures that the proposed changes are seamlessly integrated into the genesis file, pending approval.
+		- Flexibility: Provides the flexibility to alter various aspects of blockchain modules, such as consensus parameters, staking rules, or governance policies.
+
+		Usage Context:
+
+		This command is particularly useful for coordinators who are fine-tuning the blockchain settings before launch, ensuring that all module parameters are correctly set to align with the intended operational framework of the chain.
+
+
+		Example Command:
+		ignite testnet coordinator genesis-edit modify-param [module_name] [parameter_name] [new_value]
+
+		This command structure allows coordinators to precisely target and modify specific parameters within a module, enhancing the customization capabilities of the blockchain setup process.
+		`,
+		RunE: networkRequestChangeParamHandler,
+		Args: cobra.ExactArgs(4),
 	}
 
 	flagSetClearCache(c)

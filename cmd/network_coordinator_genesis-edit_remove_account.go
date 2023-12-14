@@ -14,7 +14,7 @@ import (
 func NewNetworkCoordinatorGenesisEditRemoveAccount() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "remove-account [launch-id] [address]",
-		Short: "To send a request to remove an account from the genesis file",
+		Short: "Remove an account from the genesis file",
 		RunE:  networkRequestRemoveAccountHandler,
 		Args:  cobra.ExactArgs(2),
 	}

@@ -14,7 +14,7 @@ import (
 func NewNetworkCoordinatorGenesisEditRemoveValidator() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "remove-validator [launch-id] [address]",
-		Short: "To send a request to remove a validator from the genesis file",
+		Short: "Remove a validator from the genesis file",
 		RunE:  networkRequestRemoveValidatorHandler,
 		Args:  cobra.ExactArgs(2),
 	}

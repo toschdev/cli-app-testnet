@@ -18,32 +18,40 @@ const (
 func NewNetworkCoordinatorManageAnnounceReady() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "announce-ready [launch-id]",
-		Short: "Trigger the announcement of a chain, no further changes accepted",
-		Long: `The announce-ready command communicates to the world that the chain is ready to be
-launched.
+		Short: "Trigger the announcement of a chain, no further genesis changes accepted",
+		Long: `# Overview
 
-Only the coordinator of the chain can execute the announce-ready command.
-
-	ignite testnet coordinator manage announce-ready 42
-
-After the announce-ready command is executed no changes to the genesis are accepted. For
-example, validators will no longer be able to successfully execute the "ignite
-testnet manage join" command to apply as a validator.
-
-The announce-ready command sets the date and time after which the chain will start. By
-default, the current time is set. To give validators more time to prepare for
-the announce-ready, set the time with the "--launch-time" flag:
-
-	ignite testnet coordinator manage announce-ready 42 --launch-time 2023-01-01T00:00:00Z
-
-After the announce-ready command is executed, validators can generate the finalized
-genesis and prepare their nodes for the launch. For example, validators can run
-"ignite testnet manage prepare" to generate the genesis and populate the peer
-list.
-
-If you want to change the launch time or open up the genesis file for changes
-you can use "ignite testnet manage revert-launch" to make it possible, for
-example, to accept new validators and add accounts.
+		The "announce-ready" command is a pivotal operation within the Ignite testnet environment, signifying the readiness of a blockchain chain for launch. This command is exclusive to the coordinator's role, marking a critical transition in the chain's setup process.
+		
+		## Usage
+		
+		Command "ignite testnet coordinator manage announce-ready <launch ID>"
+		
+		- Example: "ignite testnet coordinator manage announce-ready 42"
+		
+		## Description
+		
+		The execution of "announce-ready" communicates globally that the chain is prepared for launch. It is a crucial signal indicating the chain's transition from the setup phase to operational status.
+		
+		Key Points:
+		
+		1. Coordinator Exclusive: Only the designated coordinator of the chain has the authority to execute this command.
+		2. Locks Genesis Changes: Once executed, the genesis file becomes immutable - further modifications or additions of validators (via "ignite testnet validator join") are no longer possible.
+		3. Launch Time Setting: The command defaults to the current time for the chain's launch. However, coordinators can schedule a future launch using the "-launch-time" flag.
+			- Example: "ignite testnet coordinator manage announce-ready 42 --launch-time 2023-01-01T00:00:00Z"
+		
+		### Post-Execution Actions
+		
+		After successfully running "announce-ready", validators are prompted to finalize the genesis file and configure their nodes for the impending launch. This preparation includes generating the final genesis file and establishing the peer list.
+		
+		- Validator Command: Validators should use "ignite testnet manage prepare for these final preparatory steps.
+		
+		### Reverting the Launch
+		
+		In cases where a revision of the launch time or reopening of the genesis file for updates is necessary, coordinators can utilize the "revert-launch" command.
+		
+		- Usage: ignite testnet coordinator manage revert-launch
+		- Purpose: This allows for modifications such as incorporating new validators or adding accounts, effectively resetting the chain's status to pre-"announce-ready" state.
 `,
 		Args: cobra.ExactArgs(1),
 		RunE: networkChainLaunchHandler,

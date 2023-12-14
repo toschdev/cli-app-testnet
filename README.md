@@ -39,20 +39,20 @@ For a complete list of the workflow, check [workflow.md](./workflow.md).
     - Purpose: Validators specify the amount of stake they are committing.
 2. **Coordinator: List Validator Genesis Edits**
     - Command: **`ignite testnet coordinator genesis review-requests <launch ID>`**
-    - Purpose: The coordinator lists all validator requests to review and approve. 
+    - Purpose: The coordinator reviews genesis edit requests from validators. These edits may include proposals for initial token allocations, validator details, and other genesis parameters.
 3. **Coordinator: Approve or Reject Validator Genesis Edits**   
     - Command: **`ignite testnet coordinator genesis approve <launch ID> <request IDs>`**
     - Command: **`ignite testnet coordinator genesis reject <launch ID> <request IDs>`**
-    - Purpose: The coordinator approves the validator requests essential for the validator set.
+    - Purpose: The coordinator decides on the validator requests, shaping the genesis file's final form. Approved requests are incorporated into the genesis file.
 4. **Coordinator: Announce Chain Launch Readiness**  
     - Command: **`ignite testnet coordinator manage announce-ready <launch ID>`**
-    - Purpose: Once the necessary validators are approved, this command signals that the chain is ready for launch.
+    - Purpose: This marks the end of the genesis file's editing phase. The coordinator declares the testnet ready for launch, signaling that no further genesis edits will be accepted.
 5. **Validators: Prepare Nodes for Launch**
     - Command: **`ignite testnet coordinator manage prepare-launch <launch ID>`**
-    - Purpose: Validators prepare their nodes for the launch, following the instructions provided by the output of this command.
+    - Purpose: Validators finalize their node configurations based on the approved genesis file. This step ensures all nodes are synchronized with the agreed-upon genesis state.
 6. **Validators: Launch Nodes**
     - Action: Validators use the provided command (e.g., **`exampled --home ~/.example`**) to launch their nodes.
-    - Purpose: When enough validators have launched their nodes, the blockchain becomes live.
+    - Purpose: Once a sufficient number of validators have activated their nodes, the testnet goes live with the blockchain operating as per the agreed genesis state.
 
 ## Developer instruction
 
