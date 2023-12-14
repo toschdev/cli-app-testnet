@@ -1,6 +1,6 @@
-# ignite testnet
-
 "Make it as easy as possible to run a testnet."
+
+# ignite testnet
 
 `ignite testnet` is an app developed for [Ignite CLI](https://github.com/ignite/cli).
 
