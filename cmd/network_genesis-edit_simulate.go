@@ -17,12 +17,12 @@ import (
 	"github.com/toschdev/testnet-app/network/networktypes"
 )
 
-// NewNetworkRequestVerify verify the request and simulate the chain.
-func NewNetworkRequestVerify() *cobra.Command {
+// NewNetworkGenesisEditSimulate verify the request and simulate the chain.
+func NewNetworkGenesisEditSimulate() *cobra.Command {
 	c := &cobra.Command{
-		Use:   "verify [launch-id] [number<,...>]",
-		Short: "Verify the request and simulate the chain genesis from them",
-		Long: `The "verify" command applies selected requests to the genesis of a chain locally
+		Use:   "simulate [launch-id] [number<,...>]",
+		Short: "To verify the request and simulate the chain genesis based on them",
+		Long: `The "simulate" command applies selected requests to the genesis of a chain locally
 to verify that approving these requests will result in a valid genesis that
 allows a chain to launch without issues. This command does not approve requests,
 only checks them.

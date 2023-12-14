@@ -9,11 +9,11 @@ import (
 	"github.com/toschdev/testnet-app/network/networkchain"
 )
 
-// NewNetworkRequestChangeParam creates a new command to send param change request.
-func NewNetworkRequestChangeParam() *cobra.Command {
+// NewNetworkGenesisEditChangeParam creates a new command to send param change request.
+func NewNetworkGenesisEditChangeParam() *cobra.Command {
 	c := &cobra.Command{
-		Use:   "change-param [launch-id] [module-name] [param-name] [value (json, string, number)]",
-		Short: "Send request to change a module param",
+		Use:   "modify-param [launch-id] [module-name] [param-name] [value (json, string, number)]",
+		Short: "To request changes to a module parameter in the genesis file",
 		RunE:  networkRequestChangeParamHandler,
 		Args:  cobra.ExactArgs(4),
 	}

@@ -15,11 +15,11 @@ import (
 	"github.com/toschdev/testnet-app/network/networktypes"
 )
 
-// NewNetworkRequestAddAccount creates a new command to send add account request.
-func NewNetworkRequestAddAccount() *cobra.Command {
+// NewNetworkGenesisEditAddAccount creates a new command to send add account request.
+func NewNetworkGenesisEditAddAccount() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "add-account [launch-id] [address] [coins]",
-		Short: "Send request to add account",
+		Short: "Send a request to add an account to the genesis file",
 		Long: `The "add account" command creates a new request to add an account with a given
 address and a specified coin balance to the genesis of the chain.
 

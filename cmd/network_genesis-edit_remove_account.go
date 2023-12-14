@@ -10,11 +10,11 @@ import (
 	"github.com/toschdev/testnet-app/network/networktypes"
 )
 
-// NewNetworkRequestRemoveAccount creates a new command to send remove account request.
-func NewNetworkRequestRemoveAccount() *cobra.Command {
+// NewNetworkGenesisEditRemoveAccount creates a new command to send remove account request.
+func NewNetworkGenesisEditRemoveAccount() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "remove-account [launch-id] [address]",
-		Short: "Send request to remove a genesis account",
+		Short: "To send a request to remove an account from the genesis file",
 		RunE:  networkRequestRemoveAccountHandler,
 		Args:  cobra.ExactArgs(2),
 	}

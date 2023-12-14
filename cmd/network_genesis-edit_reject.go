@@ -9,18 +9,16 @@ import (
 	"github.com/toschdev/testnet-app/network"
 )
 
-// NewNetworkRequestReject creates a new request reject
+// NewNetworkGenesisEditReject creates a new request reject
 // command to reject requests for a chain.
-func NewNetworkRequestReject() *cobra.Command {
+func NewNetworkGenesisEditReject() *cobra.Command {
 	c := &cobra.Command{
 		Use:     "reject [launch-id] [number<,...>]",
 		Aliases: []string{"accept"},
-		Short:   "Reject requests",
+		Short:   "To reject requests related to the genesis file",
 		Long: `The "reject" command is used by a chain's coordinator to reject requests.
 
-	ignite testnet request reject 42 1,2,3-6,7,8
-
-The syntax of the "reject" command is similar to that of the "approve" command.
+	ignite testnet genesis-edit reject 42 1,2,3-6,7,8
 `,
 		RunE: networkRequestRejectHandler,
 		Args: cobra.ExactArgs(2),

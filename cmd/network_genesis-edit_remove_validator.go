@@ -10,11 +10,11 @@ import (
 	"github.com/toschdev/testnet-app/network/networktypes"
 )
 
-// NewNetworkRequestRemoveValidator creates a new command to send remove validator request.
-func NewNetworkRequestRemoveValidator() *cobra.Command {
+// NewNetworkGenesisEditRemoveValidator creates a new command to send remove validator request.
+func NewNetworkGenesisEditRemoveValidator() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "remove-validator [launch-id] [address]",
-		Short: "Send request to remove a validator",
+		Short: "To send a request to remove a validator from the genesis file",
 		RunE:  networkRequestRemoveValidatorHandler,
 		Args:  cobra.ExactArgs(2),
 	}

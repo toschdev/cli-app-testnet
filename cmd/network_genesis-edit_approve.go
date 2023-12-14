@@ -14,18 +14,18 @@ const (
 	flagNoVerification = "no-verification"
 )
 
-// NewNetworkRequestApprove creates a new request approve
+// NewNetworkGenesisEditApprove creates a new request approve
 // command to approve requests for a chain.
-func NewNetworkRequestApprove() *cobra.Command {
+func NewNetworkGenesisEditApprove() *cobra.Command {
 	c := &cobra.Command{
 		Use:     "approve [launch-id] [number<,...>]",
 		Aliases: []string{"accept"},
-		Short:   "Approve requests",
+		Short:   "To approve pending requests related to genesis file modifications",
 		Long: `The "approve" command is used by a chain's coordinator to approve requests.
 Multiple requests can be approved using a comma-separated list and/or using a
 dash syntax.
 
-	ignite testnet request approve 42 1,2,3-6,7,8
+	ignite testnet genesis-edit approve 42 1,2,3-6,7,8
 
 The command above approves requests with IDs from 1 to 8 included on a chain
 with a launch ID 42.

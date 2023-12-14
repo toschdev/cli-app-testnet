@@ -11,11 +11,11 @@ import (
 	"github.com/toschdev/testnet-app/network"
 )
 
-// NewNetworkRequestShow creates a new request show command to show
+// NewNetworkGenesisEditShow creates a new request show command to show
 // requests details for a chain.
-func NewNetworkRequestShow() *cobra.Command {
+func NewNetworkGenesisEditShow() *cobra.Command {
 	c := &cobra.Command{
-		Use:   "show [launch-id] [request-id]",
+		Use:   "show-request [launch-id] [request-id]",
 		Short: "Show detailed information about a request",
 		RunE:  networkRequestShowHandler,
 		Args:  cobra.ExactArgs(2),
