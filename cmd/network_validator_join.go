@@ -25,9 +25,9 @@ const (
 	flagPeerAddress = "peer-address"
 )
 
-// NewNetworkManageJoin creates a new manage join command to join
+// NewNetworkValidatorJoin creates a new manage join command to join
 // to a network as a validator.
-func NewNetworkManageJoin() *cobra.Command {
+func NewNetworkValidatorJoin() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "join [launch-id]",
 		Short: "Request to join a testnet as a validator",
@@ -45,7 +45,7 @@ The following command will send a request to join blockchain with launch ID 42
 as a validator and request to be added as an account with a token balance of
 95000000 STAKE.
 
-	ignite testnet manage join 42 --amount 95000000stake
+	ignite testnet validator join 42 --amount 95000000stake
 
 A request to join as a validator contains a gentx file. Ignite looks for gentx
 in a home directory used by "ignite testnet manage init" by default. To use a
@@ -58,7 +58,7 @@ IP address and will attempt to automatically detect and fill in the value. If
 you want to manually specify the IP address, you can use the "--peer-address"
 flag:
 
-	ignite testnet manage join 42 --peer-address 0.0.0.0
+	ignite testnet validator join 42 --peer-address 0.0.0.0
 
 Since "join" broadcasts a transaction to the Ignite blockchain, you will need an
 account on the Ignite blockchain. During the testnet phase, however, Ignite

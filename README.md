@@ -29,9 +29,9 @@ ignite app install -g $(pwd)
 1. **Validators: Setup Nodes and Request to Join**
    
    Do these steps on a dedicated validator node.
-    - Command: **`ignite testnet manage setup <launch ID>`**
+    - Command: **`ignite testnet validator setup <launch ID>`**
     - Purpose: Validators setup their nodes and request to join the testnet as validators.
-    - Command: **`ignite testnet manage join <launch ID> --amount <stake amount>`**
+    - Command: **`ignite testnet validator join <launch ID> --amount <stake amount>`**
     - Purpose: Validators specify the amount of stake they are committing.
 2. **Coordinator: List Validator Genesis Edits**
     - Command: **`ignite testnet genesis-edit list-requests <launch ID>`**
