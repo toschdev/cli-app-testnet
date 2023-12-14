@@ -1,4 +1,4 @@
-"Make it as easy as possible to run a testnet."
+"Make it as easy as possible to start a distributed testnet."
 
 # ignite testnet
 
