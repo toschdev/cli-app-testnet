@@ -31,19 +31,18 @@ For a complete list of the workflow, check [workflow.md](./workflow.md).
 1. **Validators: Setup Nodes and Request to Join**
    
    Do these steps on a dedicated validator node.
-    - Command: **`ignite testnet validator manage setup <launch ID>`**
+    - Command: **`ignite testnet node setup <launch ID>`**
     - Purpose: Validators setup their nodes and in order to request to join the testnet as validators.
     - Command: **`ignite testnet validator manage join <launch ID> --amount <stake amount>`**
     - Purpose: Validators specify the amount of stake they are committing.
 2. **Coordinator: List Validator Genesis Edits**
     - Command: **`ignite testnet coordinator genesis review-requests <launch ID>`**
-    - Purpose: The coordinator lists all validator requests to review and approve.
-3. **Coordinator: Approve or Reject Validator Genesis Edits**
+    - Purpose: The coordinator lists all validator requests to review and approve. 
+3. **Coordinator: Approve or Reject Validator Genesis Edits**   
     - Command: **`ignite testnet coordinator genesis approve <launch ID> <request IDs>`**
     - Command: **`ignite testnet coordinator genesis reject <launch ID> <request IDs>`**
     - Purpose: The coordinator approves the validator requests essential for the validator set.
-4. **Coordinator: Announce Chain Launch Readiness**
-    - Command: **`ignite testnet coordinator manage announce-ready <launch ID>`**
+4. **Coordinator: Announce Chain Launch Readiness**  
     - Purpose: Once the necessary validators are approved, this command signals that the chain is ready for launch.
 5. **Validators: Prepare Nodes for Launch**
     - Command: **`ignite testnet coordinator manage prepare-launch <launch ID>`**
