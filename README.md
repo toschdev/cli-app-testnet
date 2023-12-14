@@ -58,6 +58,12 @@ Learn about [coordinator](./coordinator.md) and [validator](./validator.md) role
 
 ## Developer instruction
 
+Get some tokens from the spn faucet:
+
+```bash
+curl -i -X POST -d  '{"address": "spn1kwlf..."}' https://faucet.devnet.ignite.com
+```
+
 - Clone this repo locally
 - Run `ignite app install -g $(pwd)` to add the app to global config
 - The `ignite testnet` command is now available with the local version of the app
