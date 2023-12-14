@@ -1,4 +1,4 @@
-module github.com/toschdev/testnet-app
+module github.com/toschdev/ignite-testnet
 
 go 1.21.1
 

@@ -8,7 +8,7 @@ import (
 	"github.com/ignite/cli/ignite/pkg/cliui"
 	"github.com/spf13/cobra"
 
-	"github.com/toschdev/testnet-app/network"
+	"github.com/toschdev/ignite-testnet/network"
 )
 
 // NewNetworkRewardSet creates a new chain reward set command to

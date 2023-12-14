@@ -16,7 +16,7 @@ import (
 	"github.com/pelletier/go-toml"
 	"github.com/pkg/errors"
 
-	"github.com/toschdev/testnet-app/network/networktypes"
+	"github.com/toschdev/ignite-testnet/network/networktypes"
 )
 
 // listeningTimeout is the maximum time to wait for the chain start.

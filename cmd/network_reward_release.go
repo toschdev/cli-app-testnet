@@ -16,8 +16,8 @@ import (
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 
-	"github.com/toschdev/testnet-app/network"
-	"github.com/toschdev/testnet-app/network/networktypes"
+	"github.com/toschdev/ignite-testnet/network"
+	"github.com/toschdev/ignite-testnet/network/networktypes"
 )
 
 const (

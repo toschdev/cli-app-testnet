@@ -13,7 +13,7 @@ import (
 	spntypes "github.com/tendermint/spn/pkg/types"
 	monitoringptypes "github.com/tendermint/spn/x/monitoringp/types"
 
-	"github.com/toschdev/testnet-app/network/networktypes"
+	"github.com/toschdev/ignite-testnet/network/networktypes"
 )
 
 // Node is node builder.

@@ -8,8 +8,8 @@ import (
 	"github.com/ignite/cli/ignite/pkg/xurl"
 	launchtypes "github.com/tendermint/spn/x/launch/types"
 
-	"github.com/toschdev/testnet-app/network/networkchain"
-	"github.com/toschdev/testnet-app/network/networktypes"
+	"github.com/toschdev/ignite-testnet/network/networkchain"
+	"github.com/toschdev/ignite-testnet/network/networktypes"
 )
 
 type joinOptions struct {

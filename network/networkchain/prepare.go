@@ -17,7 +17,7 @@ import (
 	"github.com/pkg/errors"
 	launchtypes "github.com/tendermint/spn/x/launch/types"
 
-	"github.com/toschdev/testnet-app/network/networktypes"
+	"github.com/toschdev/ignite-testnet/network/networktypes"
 )
 
 // Prepare prepares the chain to be launched from genesis information.

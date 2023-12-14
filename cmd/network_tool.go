@@ -10,7 +10,7 @@ import (
 	"github.com/ignite/cli/ignite/pkg/ctxticker"
 	"github.com/ignite/cli/ignite/pkg/xchisel"
 
-	"github.com/toschdev/testnet-app/network/networkchain"
+	"github.com/toschdev/ignite-testnet/network/networkchain"
 )
 
 func NewNetworkTool() *cobra.Command {

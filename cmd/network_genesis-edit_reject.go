@@ -6,7 +6,7 @@ import (
 	"github.com/ignite/cli/ignite/pkg/numbers"
 	"github.com/spf13/cobra"
 
-	"github.com/toschdev/testnet-app/network"
+	"github.com/toschdev/ignite-testnet/network"
 )
 
 // NewNetworkGenesisEditReject creates a new request reject

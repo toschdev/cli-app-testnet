@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/toschdev/testnet-app/network/networkchain"
-	"github.com/toschdev/testnet-app/network/networktypes"
+	"github.com/toschdev/ignite-testnet/network/networkchain"
+	"github.com/toschdev/ignite-testnet/network/networktypes"
 )
 
 func TestChainHome(t *testing.T) {

@@ -13,7 +13,7 @@ import (
 	spnsample "github.com/tendermint/spn/testutil/sample"
 	launchtypes "github.com/tendermint/spn/x/launch/types"
 
-	"github.com/toschdev/testnet-app/network/networktypes"
+	"github.com/toschdev/ignite-testnet/network/networktypes"
 )
 
 var (

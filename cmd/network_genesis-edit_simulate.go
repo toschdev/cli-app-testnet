@@ -12,9 +12,9 @@ import (
 	"github.com/spf13/cobra"
 	launchtypes "github.com/tendermint/spn/x/launch/types"
 
-	"github.com/toschdev/testnet-app/network"
-	"github.com/toschdev/testnet-app/network/networkchain"
-	"github.com/toschdev/testnet-app/network/networktypes"
+	"github.com/toschdev/ignite-testnet/network"
+	"github.com/toschdev/ignite-testnet/network/networkchain"
+	"github.com/toschdev/ignite-testnet/network/networktypes"
 )
 
 // NewNetworkGenesisEditSimulate verify the request and simulate the chain.

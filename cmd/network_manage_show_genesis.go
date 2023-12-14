@@ -10,8 +10,8 @@ import (
 	"github.com/ignite/cli/ignite/pkg/xos"
 	"github.com/spf13/cobra"
 
-	"github.com/toschdev/testnet-app/network/networkchain"
-	"github.com/toschdev/testnet-app/network/networktypes"
+	"github.com/toschdev/ignite-testnet/network/networkchain"
+	"github.com/toschdev/ignite-testnet/network/networktypes"
 )
 
 func NewNetworkManageShowGenesis() *cobra.Command {

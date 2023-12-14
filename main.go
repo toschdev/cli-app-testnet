@@ -7,7 +7,7 @@ import (
 	hplugin "github.com/hashicorp/go-plugin"
 	"github.com/ignite/cli/ignite/services/plugin"
 
-	"github.com/toschdev/testnet-app/cmd"
+	"github.com/toschdev/ignite-testnet/cmd"
 )
 
 type app struct{}

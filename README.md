@@ -14,7 +14,7 @@ curl https://get.ignite.com/cli! | bash
 
 2. **Install Testnet App:**
 ```bash
-git clone https://github.com/toschdev/testnet-app && cd testnet-app
+git clone https://github.com/toschdev/ignite-testnet && cd testnet-app
 ignite app install -g $(pwd)
 ```
 

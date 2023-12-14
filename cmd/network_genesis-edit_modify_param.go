@@ -5,8 +5,8 @@ import (
 	"github.com/spf13/cobra"
 	launchtypes "github.com/tendermint/spn/x/launch/types"
 
-	"github.com/toschdev/testnet-app/network"
-	"github.com/toschdev/testnet-app/network/networkchain"
+	"github.com/toschdev/ignite-testnet/network"
+	"github.com/toschdev/ignite-testnet/network/networkchain"
 )
 
 // NewNetworkGenesisEditChangeParam creates a new command to send param change request.
