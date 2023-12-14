@@ -15,7 +15,7 @@ func NewNetworkProfile() *cobra.Command {
 		Short:  "Show the address profile info",
 		Args:   cobra.RangeArgs(0, 1),
 		RunE:   networkProfileHandler,
-		Hidden: true,
+		Hidden: false,
 	}
 	c.Flags().AddFlagSet(flagNetworkFrom())
 	c.Flags().AddFlagSet(flagSetKeyringBackend())

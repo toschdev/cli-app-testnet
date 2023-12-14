@@ -45,8 +45,8 @@ const (
 	flagCountTotal = "count-total"
 	flagReverse    = "reverse"
 
-	flagSPNNodeAddress   = "ign-node-address"
-	flagSPNFaucetAddress = "ign-faucet-address"
+	flagSPNNodeAddress   = "spn-node-address"
+	flagSPNFaucetAddress = "spn-faucet-address"
 
 	spnNodeAddressNightly   = "https://rpc.devnet.ignite.com:443"
 	spnFaucetAddressNightly = "https://faucet.devnet.ignite.com:443"
@@ -84,17 +84,17 @@ Next, ask validators to initialize their nodes and request to join the testnet
 as validators. For a testnet you can use the default values suggested by the
 CLI.
 
-	ignite testnet validator manage setup 42
+	ignite testnet validator setup 42
 
-	ignite testnet validator manage join 42 --amount 95000000stake
+	ignite testnet validator join 42 --amount 95000000stake
 
 As a coordinator list all validator requests:
 
-	ignite testnet genesis-review review-requests 42
+	ignite testnet genesis review-requests 42
 
 Approve validator requests:
 
-	ignite testnet genesis-review approve 42 1,2
+	ignite testnet genesis approve 42 1,2
 
 Once you've approved all validators you need in the validator set, announce that
 the chain is ready for launch:

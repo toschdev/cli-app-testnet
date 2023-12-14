@@ -38,7 +38,7 @@ const (
 func NewNetworkNodeSetup() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "setup [launch-id]",
-		Short: "Setup a chains binary, create a gentx for a published chain ID",
+		Short: "Fechtes and installs the chains binary from GitHub, create a gentx for a published chain ID. This command will prompt for values like self-delegation and commission.",
 		Long: `Ignite testnet node setup is a command used by validators to Setup a
 validator node for a blockchain from the information stored on the Ignite chain.
 

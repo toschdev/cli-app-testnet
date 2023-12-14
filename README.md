@@ -36,12 +36,12 @@ Learn about [coordinator](./coordinator.md) and [validator](./validator.md) role
    
    Do these steps on a dedicated validator node.
     - Command: **`ignite testnet node setup <launch ID>`**
-    - Purpose: Validators setup their nodes and in order to request to join the testnet as validators.
+    - Purpose: Fechtes and installs the chains binary from GitHub, create a gentx for a published chain ID. This command will prompt for values like self-delegation and commission. These values will be used in the validator's gentx.
     - Command: **`ignite testnet validator join <launch ID> --amount <stake amount>`**
     - Purpose: Validators specify the amount of stake they are committing.
 2. **Coordinator: List Validator Genesis Edits**
     - Command: **`ignite testnet coordinator genesis review-requests <launch ID>`**
-    - Purpose: The coordinator reviews genesis edit requests from validators. These edits may include proposals for initial token allocations, validator details, and other genesis parameters.
+    - Purpose: The coordinator reviews genesis edit requests from validators. These edits may include proposals for initial token allocations, validator details, and other genesis parameters. 
 3. **Coordinator: Approve or Reject Validator Genesis Edits**   
     - Command: **`ignite testnet coordinator genesis approve <launch ID> <request IDs>`**
     - Command: **`ignite testnet coordinator genesis reject <launch ID> <request IDs>`**
