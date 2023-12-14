@@ -33,10 +33,10 @@ ignite app install -g $(pwd)
     - Purpose: Validators setup their nodes and request to join the testnet as validators.
     - Command: **`ignite testnet manage join <launch ID> --amount <stake amount>`**
     - Purpose: Validators specify the amount of stake they are committing.
-2. **Coordinator: List Validator Requests**
+2. **Coordinator: List Validator Genesis Edits**
     - Command: **`ignite testnet genesis-edit list-requests <launch ID>`**
     - Purpose: The coordinator lists all validator requests to review and approve.
-3. **Coordinator: Approve Validator Requests**
+3. **Coordinator: Approve or Reject Validator Genesis Edits**
     - Command: **`ignite testnet genesis-edit approve <launch ID> <request IDs>`**
     - Purpose: The coordinator approves the validator requests essential for the validator set.
 4. **Coordinator: Announce Chain Launch Readiness**
