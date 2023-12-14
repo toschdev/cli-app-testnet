@@ -14,11 +14,11 @@ import (
 
 var requestSummaryHeader = []string{"ID", "Status", "Type", "Content"}
 
-// NewNetworkGenesisEditList creates a new request list command to list
+// NewNetworkGenesisEditReviewRequests creates a new request list command to list
 // requests for a chain.
-func NewNetworkGenesisEditList() *cobra.Command {
+func NewNetworkGenesisEditReviewRequests() *cobra.Command {
 	c := &cobra.Command{
-		Use:   "list-requests [launch-id]",
+		Use:   "review-requests [launch-id]",
 		Short: "To list all requests for modifications to the genesis file.",
 		RunE:  networkRequestListHandler,
 		Args:  cobra.ExactArgs(1),

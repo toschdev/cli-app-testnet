@@ -26,7 +26,7 @@ Each request has a status:
 
 	c.AddCommand(
 		NewNetworkGenesisEditShow(),
-		NewNetworkGenesisEditList(),
+		NewNetworkGenesisEditReviewRequests(),
 		NewNetworkGenesisEditApprove(),
 		NewNetworkGenesisEditReject(),
 		NewNetworkGenesisEditSimulate(),
