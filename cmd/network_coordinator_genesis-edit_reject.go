@@ -18,7 +18,7 @@ func NewNetworkCoordinatorGenesisEditReject() *cobra.Command {
 		Short:   "To reject requests related to the genesis file",
 		Long: `The "reject" command is used by a chain's coordinator to reject requests.
 
-	ignite testnet genesis-edit reject 42 1,2,3-6,7,8
+	ignite testnet coordinator genesis reject 42 1,2,3-6,7,8
 `,
 		RunE: networkRequestRejectHandler,
 		Args: cobra.ExactArgs(2),

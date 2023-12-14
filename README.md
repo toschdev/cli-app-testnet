@@ -26,6 +26,8 @@ For a complete list of the workflow, check [workflow.md](./workflow.md).
 
 ### **Workflow for Publishing a Chain on Ignite Testnet**
 
+Learn about [coordinator](./coordinator.md) and [validator](./validator.md) roles.
+
 1. **Coordinator: Publish Chain Information**
     - Command: **`ignite testnet coordinator manage start <repository URL>`**
     - Purpose: This step involves the coordinator publishing details about the chain to be launched on the Ignite blockchain. The URL points to a repository with a Cosmos SDK chain.

@@ -25,7 +25,7 @@ func NewNetworkCoordinatorGenesisEditApprove() *cobra.Command {
 Multiple requests can be approved using a comma-separated list and/or using a
 dash syntax.
 
-	ignite testnet genesis-edit approve 42 1,2,3-6,7,8
+	ignite testnet genesis approve 42 1,2,3-6,7,8
 
 The command above approves requests with IDs from 1 to 8 included on a chain
 with a launch ID 42.

@@ -28,7 +28,7 @@ func NewNetworkCoordinatorGenesisModifyParam() *cobra.Command {
 
 
 		Example Command:
-		ignite testnet coordinator genesis-edit modify-param [module_name] [parameter_name] [new_value]
+		ignite testnet coordinator genesis modify-param [module_name] [parameter_name] [new_value]
 
 		This command structure allows coordinators to precisely target and modify specific parameters within a module, enhancing the customization capabilities of the blockchain setup process.
 		`,
