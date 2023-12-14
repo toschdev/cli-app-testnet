@@ -11,7 +11,7 @@ func NewNetworkCoordinatorGenesisEdit() *cobra.Command {
 		Long: `The "genesis" namespace contains commands for creating, showing, approving, and
 rejecting genesis change requests.
 
-A genesis-edit request is a mechanism in Ignite that allows changes made to the genesis
+A genesis request is a mechanism in Ignite that allows changes made to the genesis
 file like adding accounts with token balances and validators. Anyone can submit
 a request, but only the coordinator of a chain can approve or reject a genesis request.
 
