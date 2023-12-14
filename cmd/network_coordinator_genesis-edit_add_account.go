@@ -15,8 +15,8 @@ import (
 	"github.com/toschdev/ignite-testnet/network/networktypes"
 )
 
-// NewNetworkGenesisEditAddAccount creates a new command to send add account request.
-func NewNetworkGenesisEditAddAccount() *cobra.Command {
+// NewNetworkCoordinatorGenesisEditAddAccount creates a new command to send add account request.
+func NewNetworkCoordinatorGenesisEditAddAccount() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "add-account [launch-id] [address] [coins]",
 		Short: "Send a request to add an account to the genesis file",

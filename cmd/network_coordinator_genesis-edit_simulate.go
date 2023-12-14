@@ -18,7 +18,7 @@ import (
 )
 
 // NewNetworkGenesisEditSimulate verify the request and simulate the chain.
-func NewNetworkGenesisEditSimulate() *cobra.Command {
+func NewNetworkCoordinatorGenesisEditSimulate() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "simulate [launch-id] [number<,...>]",
 		Short: "To verify the request and simulate the chain genesis based on them",

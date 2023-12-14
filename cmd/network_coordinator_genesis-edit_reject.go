@@ -9,9 +9,9 @@ import (
 	"github.com/toschdev/ignite-testnet/network"
 )
 
-// NewNetworkGenesisEditReject creates a new request reject
+// NewNetworkCoordinatorGenesisEditReject creates a new request reject
 // command to reject requests for a chain.
-func NewNetworkGenesisEditReject() *cobra.Command {
+func NewNetworkCoordinatorGenesisEditReject() *cobra.Command {
 	c := &cobra.Command{
 		Use:     "reject [launch-id] [number<,...>]",
 		Aliases: []string{"accept"},

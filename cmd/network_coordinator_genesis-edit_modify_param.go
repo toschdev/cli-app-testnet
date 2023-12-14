@@ -9,8 +9,8 @@ import (
 	"github.com/toschdev/ignite-testnet/network/networkchain"
 )
 
-// NewNetworkGenesisEditChangeParam creates a new command to send param change request.
-func NewNetworkGenesisEditChangeParam() *cobra.Command {
+// NewNetworkCoordinatorGenesisModifyParam creates a new command to send param change request.
+func NewNetworkCoordinatorGenesisModifyParam() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "modify-param [launch-id] [module-name] [param-name] [value (json, string, number)]",
 		Short: "To request changes to a module parameter in the genesis file",

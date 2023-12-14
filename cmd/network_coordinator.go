@@ -12,6 +12,8 @@ func NewNetworkCoordinator() *cobra.Command {
 	c.AddCommand(
 		NewNetworkCoordinatorProfile(),
 		NewNetworkCoordinatorManage(),
+
+		NewNetworkCoordinatorGenesisEdit(),
 	)
 	return c
 }

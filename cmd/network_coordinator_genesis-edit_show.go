@@ -11,9 +11,9 @@ import (
 	"github.com/toschdev/ignite-testnet/network"
 )
 
-// NewNetworkGenesisEditShow creates a new request show command to show
+// NewNetworkCoordinatorGenesisEditShow creates a new request show command to show
 // requests details for a chain.
-func NewNetworkGenesisEditShow() *cobra.Command {
+func NewNetworkCoordinatorGenesisEditShow() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "show-request [launch-id] [request-id]",
 		Short: "Show detailed information about a request",

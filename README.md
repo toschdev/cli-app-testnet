@@ -20,6 +20,8 @@ ignite app install -g $(pwd)
 
 ## Launching a testnet
 
+For a complete list of the workflow, check [workflow.md](./workflow.md).
+
 ### **Workflow for Publishing a Chain on Ignite Testnet**
 
 1. **Coordinator: Publish Chain Information**
@@ -34,11 +36,11 @@ ignite app install -g $(pwd)
     - Command: **`ignite testnet validator manage join <launch ID> --amount <stake amount>`**
     - Purpose: Validators specify the amount of stake they are committing.
 2. **Coordinator: List Validator Genesis Edits**
-    - Command: **`ignite testnet genesis-edit review-requests <launch ID>`**
+    - Command: **`ignite testnet genesis review-requests <launch ID>`**
     - Purpose: The coordinator lists all validator requests to review and approve.
 3. **Coordinator: Approve or Reject Validator Genesis Edits**
-    - Command: **`ignite testnet genesis-edit approve <launch ID> <request IDs>`**
-    - Command: **`ignite testnet genesis-edit reject <launch ID> <request IDs>`**
+    - Command: **`ignite testnet genesis approve <launch ID> <request IDs>`**
+    - Command: **`ignite testnet genesis reject <launch ID> <request IDs>`**
     - Purpose: The coordinator approves the validator requests essential for the validator set.
 4. **Coordinator: Announce Chain Launch Readiness**
     - Command: **`ignite testnet coordinator manage announce-ready <launch ID>`**

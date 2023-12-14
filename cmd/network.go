@@ -122,7 +122,6 @@ validators launch their nodes, a blockchain will be live.
 	// add sub commands.
 	c.AddCommand(
 		NewNetworkProject(),
-		NewNetworkGenesisEdit(),
 		NewNetworkReward(),
 		NewNetworkValidator(),
 		NewNetworkProfile(),

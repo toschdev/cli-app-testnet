@@ -14,9 +14,9 @@ import (
 
 var requestSummaryHeader = []string{"ID", "Status", "Type", "Content"}
 
-// NewNetworkGenesisEditReviewRequests creates a new request list command to list
+// NewNetworkCoordinatorGenesisEditReviewRequests creates a new request list command to list
 // requests for a chain.
-func NewNetworkGenesisEditReviewRequests() *cobra.Command {
+func NewNetworkCoordinatorGenesisEditReviewRequests() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "review-requests [launch-id]",
 		Short: "To list all requests for modifications to the genesis file.",

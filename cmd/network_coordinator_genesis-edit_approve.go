@@ -14,9 +14,9 @@ const (
 	flagNoVerification = "no-verification"
 )
 
-// NewNetworkGenesisEditApprove creates a new request approve
+// NewNetworkCoordinatorGenesisEditApprove creates a new request approve
 // command to approve requests for a chain.
-func NewNetworkGenesisEditApprove() *cobra.Command {
+func NewNetworkCoordinatorGenesisEditApprove() *cobra.Command {
 	c := &cobra.Command{
 		Use:     "approve [launch-id] [number<,...>]",
 		Aliases: []string{"accept"},

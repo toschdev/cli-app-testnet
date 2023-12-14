@@ -10,12 +10,12 @@ import (
 	"github.com/toschdev/ignite-testnet/network/networktypes"
 )
 
-// NewNetworkGenesisEditRemoveValidator creates a new command to send remove validator request.
-func NewNetworkGenesisEditRemoveValidator() *cobra.Command {
+// NewNetworkCoordinatorGenesisEditRemoveAccount creates a new command to send remove account request.
+func NewNetworkCoordinatorGenesisEditRemoveAccount() *cobra.Command {
 	c := &cobra.Command{
-		Use:   "remove-validator [launch-id] [address]",
-		Short: "To send a request to remove a validator from the genesis file",
-		RunE:  networkRequestRemoveValidatorHandler,
+		Use:   "remove-account [launch-id] [address]",
+		Short: "To send a request to remove an account from the genesis file",
+		RunE:  networkRequestRemoveAccountHandler,
 		Args:  cobra.ExactArgs(2),
 	}
 
@@ -27,7 +27,7 @@ func NewNetworkGenesisEditRemoveValidator() *cobra.Command {
 	return c
 }
 
-func networkRequestRemoveValidatorHandler(cmd *cobra.Command, args []string) error {
+func networkRequestRemoveAccountHandler(cmd *cobra.Command, args []string) error {
 	session := cliui.New(cliui.StartSpinner())
 	defer session.End()
 
@@ -58,22 +58,22 @@ func networkRequestRemoveValidatorHandler(cmd *cobra.Command, args []string) err
 		return err
 	}
 
-	// create the remove validator request
-	removeValidatorRequest := launchtypes.NewValidatorRemoval(
+	// create the remove account request
+	removeAccountRequest := launchtypes.NewAccountRemoval(
 		address,
 	)
 
-	// simulate the remove validator request
+	// simulate the remove account request
 	if err := verifyRequestsFromRequestContents(
 		cmd.Context(),
 		cacheStorage,
 		nb,
 		launchID,
-		removeValidatorRequest,
+		removeAccountRequest,
 	); err != nil {
 		return err
 	}
 
 	// send the request
-	return n.SendRequest(cmd.Context(), launchID, removeValidatorRequest)
+	return n.SendRequest(cmd.Context(), launchID, removeAccountRequest)
 }
