@@ -27,23 +27,24 @@ ignite app install -g $(pwd)
     - Purpose: This step involves the coordinator publishing details about the chain to be launched on the Ignite blockchain. The URL points to a repository with a Cosmos SDK chain.
     - Output: A launch ID
 1. **Validators: Setup Nodes and Request to Join**
+   Do these steps on a dedicated validator node.
     - Command: **`ignite testnet manage setup <launch ID>`**
     - Purpose: Validators setup their nodes and request to join the testnet as validators.
     - Command: **`ignite testnet manage join <launch ID> --amount <stake amount>`**
     - Purpose: Validators specify the amount of stake they are committing.
-1. **Coordinator: List Validator Requests**
+2. **Coordinator: List Validator Requests**
     - Command: **`ignite testnet request list <launch ID>`**
     - Purpose: The coordinator lists all validator requests to review and approve.
-1. **Coordinator: Approve Validator Requests**
+3. **Coordinator: Approve Validator Requests**
     - Command: **`ignite testnet request approve <launch ID> <request IDs>`**
     - Purpose: The coordinator approves the validator requests essential for the validator set.
-1. **Coordinator: Announce Chain Launch Readiness**
+4. **Coordinator: Announce Chain Launch Readiness**
     - Command: **`ignite testnet manage announce-ready <launch ID>`**
     - Purpose: Once the necessary validators are approved, this command signals that the chain is ready for launch.
-1. **Validators: Prepare Nodes for Launch**
+5. **Validators: Prepare Nodes for Launch**
     - Command: **`ignite testnet manage prepare-launch <launch ID>`**
     - Purpose: Validators prepare their nodes for the launch, following the instructions provided by the output of this command.
-1. **Validators: Launch Nodes**
+6. **Validators: Launch Nodes**
     - Action: Validators use the provided command (e.g., **`exampled --home ~/.example`**) to launch their nodes.
     - Purpose: When enough validators have launched their nodes, the blockchain becomes live.
 
