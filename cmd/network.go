@@ -94,7 +94,7 @@ As a coordinator list all validator requests:
 
 Approve validator requests:
 
-	ignite testnet genesis approve 42 1,2
+	ignite testnet coordinator manage genesis approve 42 1,2
 
 Once you've approved all validators you need in the validator set, announce that
 the chain is ready for launch:
