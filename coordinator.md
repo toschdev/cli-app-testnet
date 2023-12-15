@@ -14,7 +14,7 @@ The `ignite testnet coordinator profile` command allows coordinators to manage t
     - **`ignite testnet coordinator manage install-binaries`**
     - Purpose: Installing the correct binaries to work with the genesis file.
 2. **Start a New Testnet**
-    - **`ignite testnet coordinator manage start`**
+    - **`ignite testnet coordinator manage start --chain-id example-1`**
     - Purpose: Begin the process of launching a new blockchain.
 3. **Manage Genesis File**
     - **`ignite testnet coordinator genesis`**
