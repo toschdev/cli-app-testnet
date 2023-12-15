@@ -11,7 +11,7 @@ import (
 
 var chainGenesisValSummaryHeader = []string{"Genesis Validator", "Self Delegation", "Peer"}
 
-func NewNetworkCoordinatorManageShowValidators() *cobra.Command {
+func NewNetworkShowValidators() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "validators [launch-id]",
 		Short: "Show all validators of the chain",

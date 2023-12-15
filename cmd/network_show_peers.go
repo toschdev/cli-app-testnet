@@ -14,7 +14,7 @@ import (
 	"github.com/toschdev/ignite-testnet/network"
 )
 
-func NewNetworkCoordinatorManageShowPeers() *cobra.Command {
+func NewNetworkShowPeers() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "peers [launch-id]",
 		Short: "Show peers list of the chain",

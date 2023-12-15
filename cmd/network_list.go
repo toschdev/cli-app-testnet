@@ -27,8 +27,8 @@ var LaunchSummaryAdvancedHeader = []string{
 	"reward",
 }
 
-// NewNetworkCoordinatorManageList returns a new command to list all published chains on Ignite.
-func NewNetworkCoordinatorManageList() *cobra.Command {
+// NewNetworkList returns a new command to list all published chains on Ignite.
+func NewNetworkList() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "list",
 		Short: "List published chains",

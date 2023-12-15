@@ -9,19 +9,19 @@ import (
 
 const flagOut = "out"
 
-// NewNetworkCoordinatorManageShow creates a new chain show
+// NewNetworkShow creates a new chain show
 // command to show a chain details on SPN.
-func NewNetworkCoordinatorManageShow() *cobra.Command {
+func NewNetworkShow() *cobra.Command {
 	c := &cobra.Command{
 		Use:   "show",
 		Short: "Show details of a chain",
 	}
 	c.AddCommand(
-		NewNetworkCoordinatorManageShowInfo(),
-		NewNetworkCoordinatorManageShowGenesis(),
-		NewNetworkCoordinatorManageShowAccounts(),
-		NewNetworkCoordinatorManageShowValidators(),
-		NewNetworkCoordinatorManageShowPeers(),
+		NewNetworkShowInfo(),
+		NewNetworkShowGenesis(),
+		NewNetworkShowAccounts(),
+		NewNetworkShowValidators(),
+		NewNetworkShowPeers(),
 	)
 	return c
 }

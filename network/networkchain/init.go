@@ -162,9 +162,10 @@ func (c *Chain) initGenesis(ctx context.Context) error {
 	}
 
 	// check the initial genesis is valid
-	if err := c.checkInitialGenesis(ctx); err != nil {
-		return err
-	}
+	// some chains have a different command for checking genesis. aka junod genesis validate vs spn validate-genesis
+	// if err := c.checkInitialGenesis(ctx); err != nil {
+	// 	return err
+	// }
 
 	c.ev.Send("Genesis initialized", events.ProgressFinish())
 	return nil

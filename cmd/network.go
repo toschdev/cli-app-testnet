@@ -51,8 +51,8 @@ const (
 	spnNodeAddressNightly   = "https://rpc.devnet.ignite.com:443"
 	spnFaucetAddressNightly = "https://faucet.devnet.ignite.com:443"
 
-	spnNodeAddressLocal   = "http://0.0.0.0:26661"
-	spnFaucetAddressLocal = "http://0.0.0.0:4502"
+	spnNodeAddressLocal   = "http://0.0.0.0:26657"
+	spnFaucetAddressLocal = "http://0.0.0.0:4500"
 )
 
 // NewNetwork creates a new network command that holds some other sub commands
@@ -128,6 +128,8 @@ validators launch their nodes, a blockchain will be live.
 		NewNetworkCoordinator(),
 		NewNetworkTool(),
 		NewNetworkVersion(),
+		NewNetworkList(),
+		NewNetworkShow(),
 	)
 
 	return c

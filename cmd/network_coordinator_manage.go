@@ -35,8 +35,6 @@ All chains published to Ignite can be listed by using the "list" command.
 
 	c.AddCommand(
 		NewNetworkCoordinatorManageStart(),
-		NewNetworkCoordinatorManageList(),
-		NewNetworkCoordinatorManageShow(),
 		NewNetworkCoordinatorManagePrepareLaunch(),
 		NewNetworkCoordinatorManageAnnounceReady(),
 		NewNetworkCoordinatorManageRevertLaunch(),
