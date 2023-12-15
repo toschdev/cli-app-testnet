@@ -11,10 +11,10 @@ const flagOut = "out"
 
 // NewNetworkShow creates a new chain show
 // command to show a chain details on SPN.
-func NewNetworkShow() *cobra.Command {
+func NewNetworkShowChain() *cobra.Command {
 	c := &cobra.Command{
-		Use:   "show",
-		Short: "Show details of a chain",
+		Use:   "show-chain",
+		Short: "<id> Show details of a chain ID",
 	}
 	c.AddCommand(
 		NewNetworkShowInfo(),

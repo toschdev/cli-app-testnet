@@ -128,8 +128,8 @@ validators launch their nodes, a blockchain will be live.
 		NewNetworkCoordinator(),
 		NewNetworkTool(),
 		NewNetworkVersion(),
-		NewNetworkList(),
-		NewNetworkShow(),
+		NewNetworkListChains(),
+		NewNetworkShowChain(),
 	)
 
 	return c

@@ -28,9 +28,9 @@ var LaunchSummaryAdvancedHeader = []string{
 }
 
 // NewNetworkList returns a new command to list all published chains on Ignite.
-func NewNetworkList() *cobra.Command {
+func NewNetworkListChains() *cobra.Command {
 	c := &cobra.Command{
-		Use:   "list",
+		Use:   "list-chains",
 		Short: "List published chains",
 		Args:  cobra.NoArgs,
 		RunE:  networkChainListHandler,

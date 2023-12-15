@@ -12,7 +12,7 @@ import (
 func NewNetworkProfile() *cobra.Command {
 	c := &cobra.Command{
 		Use:    "profile [project-id]",
-		Short:  "Show the address profile info",
+		Short:  "Show your current address profile info",
 		Args:   cobra.RangeArgs(0, 1),
 		RunE:   networkProfileHandler,
 		Hidden: false,
