@@ -35,7 +35,7 @@ Learn about [coordinator](./coordinator.md) and [validator](./validator.md) role
 1. **Validators: Setup Nodes and Request to Join**
    
    Do these steps on a dedicated validator node.
-    - Command: **`ignite testnet node setup <launch ID>`**
+    - Command: **`ignite testnet validator setup <launch ID>`**
     - Purpose: Fechtes and installs the chains binary from GitHub, create a gentx for a published chain ID. This command will prompt for values like self-delegation and commission. These values will be used in the validator's gentx.
     - Command: **`ignite testnet validator join <launch ID> --amount <stake amount>`**
     - Purpose: Validators specify the amount of stake they are committing.
